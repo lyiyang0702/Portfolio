@@ -126,16 +126,18 @@ nav .fa{
     margin: auto;
     padding-top: 50px;
 }
-h1{
+.introductions h1{
     color:cornflowerblue;
     font-size: 36px;
     font-weight: 600;
     text-align: center;
 
 }
-
+a {
+    text-decoration: none;
+}
 p{
-    color:chocolate;
+    color:rgb(7, 7, 6);
     font-size: 20px;
     font-weight: 300;
     padding: 10px;
@@ -163,11 +165,12 @@ h2{
 
 .projects-col{
     flex-basis: 31%;
-    background-size: cover;
-    border-radius: 10px;
+    background-size:  cover;
+    background-repeat: no-repeat;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
+    border-radius: 20%;
     height:300px;
     transition: 1s ease;
 }
@@ -175,40 +178,45 @@ h2{
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
+    visibility: hidden;
 }
 .project-description{
+    
     visibility: hidden
 }
 .projects-col:hover{
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    border-radius: 0%;
 }
-.projects-col:hover .project-description{
-    background-color: white;
-    position: fixed; /* or absolute */
-    top: 50%;
-    left: 50%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: 75%;
-    visibility:visible;
-}
-/* h3{
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
+/* .projects-col:hover .btn_2{
+    visibility: visible;
 } */
-
-.btn_2{
-    text-decoration: none;
-    margin-left: 32%;
-    color: white;
-    padding: 5px 10px;
-    font-size: 15px;
-    background:rgb(69, 202, 158);
+.projects-col:hover .project-description{
+    background-color: rgba(231, 220, 220, 0.5);
+    
+    position: relative; 
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility:visible;
     cursor: pointer;
+    
+}
+
+/*.btn_2{
+    margin-left: 35%;
+    color: white;
+    border-radius: 10%;
+    padding: 5px 10px;
+    position: relative;
+    font-size: 15px;
+    background:rgb(69, 111, 202);
+    cursor: pointer;
+    visibility: hidden;
 }
 .btn_2:hover{
     background-color: rgba(26, 202, 214, 0.5);
     transition: 1s;
-}
+}*/
