@@ -53,6 +53,7 @@ nav{
 .projects{
     display: inline-block ;
     padding: 1% 30%;
+    font-family: 'League Spartan', sans-serif;
 }
  .projects h4{
     font-size: 40px;
@@ -70,6 +71,10 @@ nav{
 
 .work-description h3{
     text-align: center;
+}
+
+.work-description h2 i{
+    color:brown;
 }
 .screenshots{
     display: flex;
