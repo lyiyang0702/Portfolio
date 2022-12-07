@@ -58,6 +58,7 @@ nav{
 }
 
 .text-box h1{
+    margin-top: 10%;
     color:cadetblue;
     font-size: 60px;
 }
@@ -182,7 +183,6 @@ h2{
     visibility: hidden;
 }
 .project-description{
-    
     visibility: hidden
 }
 .projects-col:hover{
@@ -194,10 +194,9 @@ h2{
 } */
 .projects-col:hover .project-description{
     background-color: rgba(231, 220, 220, 0.5);
-    
     position: relative; 
     backdrop-filter: blur(10px);
-    padding: 10px;
+    padding: 1%;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);

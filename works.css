@@ -124,17 +124,17 @@ nav .fa{
 
 .projects{
     display: inline-block ;
-    padding: 1% 30%;
+    padding: 1% 5%;
     font-family: 'League Spartan', sans-serif;
 }
  .projects h4{
-    font-size: 40px;
+    font-size: 150%;
     text-align:  center;
     margin: 5%;
  }
 .work-description{
    
-    font-size: large;
+    font-size: 100%;
     width: fit-content;
     line-height: 1.5 ;
     /* border-top: 1px dotted red; */
@@ -142,7 +142,7 @@ nav .fa{
 }
 
 .work-description h3{
-    text-align: center;
+    text-align: left;
 }
 
 .work-description h2 i{
@@ -151,7 +151,7 @@ nav .fa{
 .screenshots{
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 1%;
     margin-top: 3%;
     margin-bottom: 3%;
 }
