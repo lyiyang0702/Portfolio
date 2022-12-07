@@ -24,7 +24,7 @@ nav{
 .nav-links ul li{
     list-style: none;
     display: inline-block;
-    padding: 2px 100px;
+    padding: 2px 2px;
     position: relative;
 }
 
