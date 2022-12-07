@@ -123,8 +123,10 @@ nav .fa{
 /* Work Descriptions */
 
 .projects{
-    display: inline-block ;
-    padding: 1% 5%;
+    display: block ;
+    width: 50%;
+    margin: auto;
+    padding-top: 50px;
     font-family: 'League Spartan', sans-serif;
 }
  .projects h4{
@@ -142,7 +144,7 @@ nav .fa{
 }
 
 .work-description h3{
-    text-align: left;
+    text-align: center;
 }
 
 .work-description h2 i{
