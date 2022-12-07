@@ -183,6 +183,10 @@ nav .fa{
     transition: 1s;
 }
 
+.work-description iframe{
+    width: 800px;
+    height: 400px;
+}
 @media(max-width: 700px){
     .nav-links ul li{
         display: block;
