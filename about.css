@@ -47,3 +47,22 @@ nav{
 .nav-links ul li:hover::after{
     width: 90%;
 }
+
+.text-box{
+    width: 90%;
+    position: absolute;
+    top:30%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1{
+    color:cadetblue;
+    font-size: 60px;
+}
+
+.text-box p{
+    margin: 40px 0 40px;
+    font-size: 40px;
+}
