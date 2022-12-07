@@ -89,36 +89,6 @@ nav .fa{
     display: none;
 }
 
-@media(max-width: 700px){
-    .text-box h1{
-        font-size: 20px;
-    }
-    .nav-links ul li{
-        display: block;
-        padding: 20px 30px;
-    }
-    .nav-links ul li a{
-        font-size: 15px;
-    }
-    .nav-links{
-        position: absolute;
-        background: #d69b94;
-        height: 100vh;
-        width: 150px;
-        top:0;
-        right:-200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-    nav .fa{
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-}
 
 /* Work Descriptions */
 
@@ -193,33 +163,4 @@ nav .fa{
 .btn_2:hover{
     background-color: rgba(26, 202, 214, 0.5);
     transition: 1s;
-}
-
-
-@media(max-width: 700px){
-    .nav-links ul li{
-        display: block;
-        padding: 20px 30px;
-    }
-    .nav-links ul li a{
-        font-size: 15px;
-    }
-    .nav-links{
-        position: absolute;
-        background: #d69b94;
-        height: 100vh;
-        width: 150px;
-        top:0;
-        right:-200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-    nav .fa{
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
 }
