@@ -167,15 +167,16 @@ h2{
 
 .projects-col{
     flex-basis: 31%;
-    background-size:  cover;
+    background-size:cover;
     background-repeat: no-repeat;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
     border-radius: 20%;
-    height:300px;
+    height:250px;
     transition: 1s ease;
 }
+
 .project-name{
     text-align: center;
     font-weight: 600;
