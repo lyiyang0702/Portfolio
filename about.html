@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yiyang Lu's Website</title>
+    <title>Yiyang Lu's Portfolio</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            $('#header').load("header.html");
+            $('#footer').load("footer.html");
+        });
+    </script>
+
     <link rel="icon" type="image/x-icon" href="website-icon.png">
-    <link rel="stylesheet" href="about.css">
+    <link href="style.css" rel="stylesheet" type="text/css" href=“style.css”/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,43 +26,15 @@
 </head>
 
 <body>
-    <section class="header">
-        <nav>
-            <img src="images/avatar.png" width="120" height="120">
-            <img src="images/name.gif" width="200" height="200">
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times-circle" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html"> HOME </a></li>
-                    <!-- <li><a href="about.html"> ABOUT </a></li> -->
-                    <li><a href="works.html"> WORKS </a></li>
-                    <!-- <li><a href="cv.html"> CV/Résumé </a></li> -->
-                </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
-    </section>
+    <div id="header"></div>
 
     <section class = "about">
-        <h1>About Me</h1>
-        <img src="images/name.gif" width="200" height="200">
-        <div class="text-box">
+        <h1 >About Me</h1>
             <p>Hi! My name is Yiyang Lu. I'm currently a fourth year Computer Science: Game Design student in UCSC.
                 I'm passionate about games from all aspects. 
             </p>
-        </div>
     </section>
-
-    <!--Toggle Menu-->
-    <script>
-        var navLinks = document.getElementById("navLinks");
-        function showMenu() {
-            navLinks.style.right = "0";
-        }
-        function hideMenu() {
-            navLinks.style.right = "-200px";
-        }
-    </script>
+    <div id="footer"></div>
 </body>
 
 </html>
