@@ -1,227 +1,167 @@
-*{
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-}
-.header {
-    min-height: 60vh;
-    width: 100%;
+.container {
     background-color: antiquewhite;
-    font-family: 'Silkscreen', cursive;
-}
-nav{
-    display: flex;
-    padding: 1% 6%;
-    justify-content: space-between;
-    align-items: center;
+    padding: 1%;
+    width: 100%;
 }
 
-.nav-links{
-    flex: 1;
-    text-align: center;
-}
-
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 2px 100px;
-    position: relative;
-}
-
-.nav-links ul li a{
-    color: brown;
-    text-decoration: none;
-    font-size: x-large;
-}
-
-.nav-links ul li::after{
-    content: '';
-    width: 0%;
-    height: 3px;
-    background: #db20079f;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-
-.nav-links ul li:hover::after{
-    width: 90%;
-}
-
-.text-box{
+.text-box {
     width: 90%;
     position: relative;
-    top:30%;
-    left:50%;
+    margin-top: 10%;
+    left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    font-family: 'Silkscreen', cursive;
 }
 
-.text-box h1{
-    margin-top: 10%;
-    color:cadetblue;
-    font-size: 60px;
+.text-box h1 {
+    color: cadetblue;
+    font-size: 5vw;
 }
 
-.text-box p{
+.text-box p {
     margin: 40px 0 40px;
-    font-size: 40px;
+    font-size: 3vw;
 }
 
-.btn{
+.btn {
     display: inline-block;
     text-decoration: none;
-    color:chocolate;
+    color: chocolate;
     border-radius: 25px;
     border: 3px solid white;
     padding: 12px 34px;
-    font-size: 20px;
-    background:transparent;
+    font-size: 1em;
+    background: transparent;
     position: relative;
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: rgba(223, 174, 129, 0.5);
     transition: 1s;
 }
 
-nav .fa{
-    display: none;
-}
 
-@media(max-width: 700px){
-    .text-box h1{
-        font-size: 20px;
-    }
-    .nav-links ul li{
-        display: block;
-        padding: 20px 30px;
-    }
-    .nav-links ul li a{
-        font-size: 15px;
-    }
-    .nav-links{
-        position: absolute;
-        background: #d69b94;
-        height: 100vh;
-        width: 150px;
-        top:0;
-        right:-200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-    nav .fa{
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-}
+
+
 
 /*---- GAMES ---- */
-.games{
+.games {
     width: 50%;
+    height: 200%;
     margin: auto;
     padding-top: 50px;
     font-family: 'League Spartan', sans-serif;
 }
-.introductions h1{
-    color:cornflowerblue;
-    font-size: 36px;
+
+.introductions {
+    text-align: center;
+}
+
+.introductions h1 {
+    color: cornflowerblue;
+    font-size: 2vw;
     font-weight: 600;
-    text-align: center;
 
 }
-a {
-    text-decoration: none;
-}
-p{
-    color:rgb(7, 7, 6);
-    font-size: 20px;
+
+.introductions p {
+    color: rgb(7, 7, 6);
+    font-size: 1vw;
     font-weight: 300;
-    padding: 10px;
-    line-height:0.8;
-    text-align: center;
-}
-p a{
-    text-decoration: none;
+    padding: 1%;
+    line-height: 0.8;
+
 }
 
-.row{
-    margin-top:3%;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-h2{
+.games h2 {
     margin-left: 3%;
     margin-top: 3%;
+    font-size: 2vw;
 }
-.row p{
+
+.row {
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+
+}
+
+
+.row p {
     line-height: 1.2;
 }
 
-.projects-col{
-    flex-basis: 31%;
-    background-size:cover;
-    background-repeat: no-repeat;
+.projects-col {
+    position: relative;
+    flex-basis: 30%;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
-    border-radius: 20%;
-    height:250px;
     transition: 1s ease;
 }
 
-.project-name{
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
-    visibility: hidden;
+.projects-col img {
+    opacity: 1;
+    border-radius: 10%;
+    transition: .5s ease;
+    backface-visibility: hidden;
 }
-.project-description{
-    visibility: hidden
-}
-.projects-col:hover{
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
-    border-radius: 0%;
-}
-.project-description b{
-    color:brown;
 
-}
-/* .projects-col:hover .btn_2{
-    visibility: visible;
-} */
-.projects-col:hover .project-description{
-    background-color: rgba(231, 220, 220, 0.5);
-    position: relative; 
-    backdrop-filter: blur(10px);
-    padding: 1%;
-    top: 35%;
+.projects-col .project-description {
+    transition: .5s ease;
+    font-size: 1em;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    visibility:visible;
-    cursor: pointer;
-    
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text{
+    text-align: left;
+}
+.text b {
+    color: brown;
 }
 
-/*.btn_2{
-    margin-left: 35%;
-    color: white;
-    border-radius: 10%;
-    padding: 5px 10px;
-    position: relative;
-    font-size: 15px;
-    background:rgb(69, 111, 202);
-    cursor: pointer;
-    visibility: hidden;
+.projects-col:hover .project-description{
+    opacity: 1;
 }
-.btn_2:hover{
-    background-color: rgba(26, 202, 214, 0.5);
-    transition: 1s;
-}*/
+.projects-col:hover  .image{
+    opacity: 0.3;
+}
+
+.text b{
+    color: brown;
+  }
+
+@media(max-width: 700px) {
+    .text-box {
+        margin-top: 20%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .introductions h1{
+        font-size: 6vw;
+    }
+
+    .introductions p{
+        font-size: 4vw;
+    }
+
+    .games h2{
+        font-size: 3vw;
+        margin-top: 10%;
+    }
+
+}

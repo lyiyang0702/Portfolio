@@ -4,9 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yiyang Lu's Website</title>
+    <title>Yiyang Lu's Portfolio</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            $('#header').load("header.html");
+            $('#footer').load("footer.html");
+        });
+    </script>
+
     <link rel="icon" type="image/x-icon" href="website-icon.png">
-    <link rel="stylesheet" href="index.css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,148 +27,135 @@
 </head>
 
 <body>
-    <section class="header">
-        <nav>
-            <img src="images/avatar.png" width="120" height="120">
-            <img src="images/name.gif" width="200" height="200">
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times-circle" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html"> HOME </a></li>
-                    <!-- <li><a href="about.html"> ABOUT </a></li> -->
-                    <li><a href="works.html"> WORKS </a></li>
-                    <!-- <li><a href="cv.html"> CV/Résumé </a></li> -->
-                </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
+
+    <div id="header"></div>
+    <div class="container">
         <div class="text-box">
             <h1>Hi, My name is Yiyang Lu!</h1>
-            <p> Welcome to my Website!</p>
-            <a href="#work" class="btn"> Learn more about me :)</a>
+            <p style="font-family:'Silkscreen', cursive"> Welcome to my Website!</p>
+            <a href="#work" class="btn"> Learn more about me </a>
         </div>
-
-    </section>
+    </div>
     <!--Games-->
     <section class="games">
         <div class="introductions">
             <h1><a id="work"> My Works</a></h1>
-            <p> Finished projects.<br><br>
-                <a href="https://yiyang-lu.itch.io/">itch.o page</a>
-            </p>
+            <p><a href="https://yiyang-lu.itch.io/">itch.o page</a></p>
         </div>
 
         <h2> Projects</h2>
         <div class="row">
 
-            <div class="projects-col" style="background-image: url('images/hex.png')">
-                <div class="project-name">Hex Harmonia</div>
-                <a href="works.html#hex">
-                    <div class="project-description">
-                        <p><br><b>Hex Harmonia</b> is a 3D puzzle games that character need to resolve all the puzzles in the
-                            hexagon
-                            to escape from the room. There are six different types of puzzles in this game. </p>
+            <div class="projects-col">
+                <div class="project-description">
+                    <div class="text">
+                        <b>Hex Harmonia</b> is a 3D puzzle games that character need to resolve all the puzzles in the
+                        hexagon
+                        to escape from the room. There are six different types of puzzles in this game
                     </div>
-                </a>
-            </div>
-            
-            <div class="projects-col" style="background-image: url('images/school\ spirits.png')">
-                <div class="project-name">School Spirits</div>
-                <a href="works.html#school">
-                    <div class="project-description">
-                        <p><br><b>School Spirit</b> is a 2D Turn-based RPG game. Use your instruments and summon your Yokai buddies to fight
-                            against the enemy.</p>
-                    </div>
-                </a>
+
+                </div>
+                <a href="HexHarmonia.html"><img src="images/hex.png" style="width:100%" class="image"></a>
             </div>
 
-            <div class="projects-col" style="background-image: url('images/tsc1.png')">
-                <div class="project-name">Turtles All The Way Down</div>
-                <a href="works.html#turtle">
-                    <div class="project-description">
-                        <p><br><b>Turtles All the Way Down</b> is a Turtle snowboarding game, featuring wrap around space.
-                            Follow old trails and create new ones inline to collecting all the gems.</p>
+            <div class="projects-col">
+
+                <div class="project-description">
+                    <div class="text">
+                        <b>School Spirit</b> is a 2D Turn-based RPG game. Use your instruments and summon your Yokai
+                        buddies to fight
+                        against the enemy
                     </div>
-                </a>
+                </div>
+                <a href="SchoolSpirit.html"><img src="images/school_spirits.png" style="width:100%" class="image"></a>
             </div>
 
-            <div class="projects-col" style="background-image: url('images/dogy_4.png')">
-                <div class="project-name">Dodgy Dice</div>
-                <a href="works.html#dice">
-                    <div class="project-description">
-                        <p><br><b>Dodgy Dice</b> is a top down, vampire-survivor-like bullet hell where the character is a
-                            multi sided die.
-                            Each time a die is rolled, a number is generated and used to fuel various behaviors of the
-                            game.</p>
+            <div class="projects-col">
+                <div class="project-description">
+                    <div class="text">
+                        <b>Turtles All the Way Down</b> is a Turtle snowboarding game, featuring wrap around space.
+                        Follow old trails and create new ones inline to collecting all the gems
                     </div>
-                </a>
+                </div>
+                <a href="TurtleAllTheWayDown.html"><img src="images/tsc1.png" style="width:100%" class="image"></a>
+            </div>
 
-            </div>
-            <div class="projects-col" style="background-image: url('images/body.gif')">
-                <div class="project-name">Where is My Body</div>
-                <a href="works.html#body">
-                    <div class="project-description">
-                        <p><br><b>Where is my body</b> is a 2D Endless runner game that the character is a ghost trying to find
-                            its body.
-                            The ghost has to avoid the obstacles on its way by jumping.</p>
+            <div class="projects-col">
+                <div class="project-description">
+                    <div class="text">
+                        <b>Dodgy Dice</b> is a top down, vampire-survivor-like bullet hell where the character is a
+                        multi sided die.
+                        Each time a die is rolled, a number is generated and used to fuel various behaviors of the
+                        game
                     </div>
-                </a>
+                </div>
+                <a href="DodgyDice.html"><img src="images/dogy_4.png" style="width:100%" class="image"></a>
             </div>
-            <div class="projects-col" style="background-image: url('images/Dreamchaser.png')">
-                <div class="project-name">DreamChaser</div>
-                <a href="works.html#dream">
-                    <div class="project-description">
-                        <p><br><b>DreamChaser</b> is a puzzle platformer in which a character would have to go through several
-                            dreams in order to retrieve their memories.
-                            There will be different challenges in each levels.</p>
+
+            <div class="projects-col">
+                <div class="project-description">
+                    <div class="text">
+                        <b>Where is my body</b> is a 2D Endless runner game that the character is a ghost trying to find
+                        its body.
+                        The ghost has to avoid the obstacles on its way by jumping
                     </div>
-                </a>
+                </div>
+                <a href="WhereIsMyBody.html"><img src="images/body.gif" style="width:100%" class="image"></a>
             </div>
-            <div class="projects-col" style="background-image: url('images/whale.jpg')">
-                <div class="project-name">Killer Whale</div>
-                <a href="works.html#whale">
-                    <div class="project-description">
-                        <p><br><b>Killer Whale</b> is an interactive novels that telling a story about a girl who has been
-                            swallowed by
-                            a killer whale and found a lot of mysteries waiting for her to resolve.</p>
+
+            <div class="projects-col">
+                <div class="project-description">
+                    <div class="text">
+                        <b>DreamChaser</b> is a puzzle platformer in which a character would have to go through several
+                        dreams in order to retrieve their memories.
+                        There will be different challenges in each levels
                     </div>
-                </a>
+                </div>
+                <a href="DreamChaser.html"><img src="images/Dreamchaser.png" style="width:100%" class="image"></a>
             </div>
 
         </div>
+
         <h2>Designs</h2>
         <div class="row">
-            <div class="projects-col" style="background-image: url('images/hat.png')">
-                <div class="project-name">Ace Attorney Game Poster</div>
-                <a href="works.html#poster">
-                    <div class="project-description">
-                        <p><br><b>Ace Attorney Game Poster</b> is an Interactive Poster derived from Ace Attorney games.</p>
+            <div class="projects-col">
+                <div class="project-description">
+                    <div class="text">
+                        <b>Ace Attorney Game Poster</b> is an Interactive Poster inspired by Ace Attorney Series
                     </div>
-                </a>
+                </div>
+                <a href="AceAttorneyPoster.html"><img src="images/hat.png" style="width:100%" class="image"></a>
             </div>
-            <div class="projects-col" style="background-image: url('images/Aboutart 1.png')">
-                <div class="project-name">Aboutart UI Design</div>
-                <a href="works.html#aboutArt">
-                    <div class="project-description">
-                        <p><br>An online resources app UI design prototype.</p>
+
+            <div class="projects-col">
+                <div class="project-description">
+                    <div class="text">
+                        <b>Ace Attorney Shooting</b> is an retro mini game modified from Rocket Patrol
                     </div>
-                </a>
+                </div>
+                <a href="AceAttorneyShooting.html"><img src="images/acscover.png" style="width:100%" class="image"></a>
             </div>
+
+            <div class="projects-col">
+                <div class="project-description">
+                    <div class="text">
+                        <b>Killer Whale</b> is an interactive novels that telling a story about a girl who has been
+                        swallowed by a killer whale and found a lot of mysteries waiting for her to resolve.
+                    </div>
+                </div>
+                <a href="KillerWhale.html"><img src="images/whale.jpg" style="width:100%" class="image"></a>
+            </div>
+            <!-- <div class="projects-col">
+                <div class="project-description">
+                    <div class="text">
+                        <b>About Art</b> is an online resources app UI design prototype
+                    </div>
+                </div>
+                <a href="works.html"><img src="images/Aboutart 1.png" style="width:100%" class="image"></a>
+            </div> -->
         </div>
-
-
-
     </section>
-    <!--Toggle Menu-->
-    <script>
-        var navLinks = document.getElementById("navLinks");
-        function showMenu() {
-            navLinks.style.right = "0";
-        }
-        function hideMenu() {
-            navLinks.style.right = "-200px";
-        }
-    </script>
-</body>
 
+    <div id="footer"></div>
+</body>
 </html>

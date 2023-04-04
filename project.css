@@ -1,0 +1,113 @@
+.projects{
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 5%;
+}
+
+.title{
+    line-height: 2em;
+    display: flex;
+    justify-content: center;
+    gap: 3em
+}
+
+.cover {
+    width: 60%;
+    text-align: center;
+}
+.cover video{
+    width: 100%;
+    display: inline-block;
+}
+
+.cover .btn_2{
+    display: inline-block;
+}
+
+.interactive{
+    display: block;
+}
+.description{
+    inline-size: 22em;
+    overflow-wrap: break-all;
+}
+
+.contribution{
+    margin-top: 5%;
+}
+#project-title{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2em;
+    margin-bottom: 0.3em;
+}
+#icon{
+    font-size: 2em;
+}
+.btn_2{
+    text-decoration: none;
+    color: white;
+    border-radius: 5%;
+    padding: 0 0.5em;
+    position: relative;
+    font-size: 1em;
+    background:rgb(69, 111, 202);
+    cursor: pointer;
+}
+.btn_2:hover{
+    background-color: rgba(26, 202, 214, 0.5);
+    transition: 1s;
+}
+
+.pics{
+    display: inline-block;
+    gap: 1%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+.pics img{
+    width: 20%;
+    height: 20%;
+    transition:0.25s ease;
+}
+
+.pics img:hover{
+    scale: 200%;
+    position: inherit;
+}
+
+.contribution{
+    margin-top: 5%;
+}
+
+.contribution li{
+    font-family: 'League Spartan', sans-serif;
+}
+
+
+@media(max-width: 700px) {
+
+    .description{
+        order: 1;
+    }
+    .cover{
+        order: 2;
+    }
+    .pics img{
+        width: 50%;
+        height: 50%;
+    }
+
+    .pics img:hover{
+        scale: 150%;
+    }
+
+    .title{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects{
+        justify-content: center;
+        font-size: 80%;
+    }
+}
