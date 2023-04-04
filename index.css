@@ -21,7 +21,7 @@
 
 .text-box p {
     margin: 40px 0 40px;
-    font-size: 3vw;
+    font-size: 3em;
 }
 
 .btn {
@@ -61,14 +61,14 @@
 
 .introductions h1 {
     color: cornflowerblue;
-    font-size: 2vw;
+    font-size: 2em;
     font-weight: 600;
 
 }
 
 .introductions p {
     color: rgb(7, 7, 6);
-    font-size: 1vw;
+    font-size: 1em;
     font-weight: 300;
     padding: 1%;
     line-height: 0.8;
@@ -78,7 +78,7 @@
 .games h2 {
     margin-left: 3%;
     margin-top: 3%;
-    font-size: 2vw;
+    font-size: 2em;
 }
 
 .row {
@@ -152,15 +152,15 @@
     }
 
     .introductions h1{
-        font-size: 6vw;
+        font-size: 6em;
     }
 
     .introductions p{
-        font-size: 4vw;
+        font-size: 4em;
     }
 
     .games h2{
-        font-size: 3vw;
+        font-size: 3em;
         margin-top: 10%;
     }
 
