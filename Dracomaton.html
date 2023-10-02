@@ -77,11 +77,13 @@
                      
                     <li>Item System/Item: </li>
                     In Dracomaton, an item is an object that can have negative or positive effects on player which adds a lot of variances to gameplay.<br>
+                    <img src="images/ItemOverview.png">
                     I was responsible for initializing the framework of item system, including how to create a new item; how to make each item has its unique effect; how to apply item’s effect to player etc.<br>
                     To resolve those problems, I have used Unity’s <b>ScriptableObjects</b> to create a base class: <b>BaseItem</b>, which all the future items can inherit from. Each base item has its own info such as id, icon, and Item Stats Mods & Item Status Mods are the part that takes care of item’s unique effect. The way it works is that when the Apply function in base item script get called, it will add all the mods(aka. effects) to its host damage source/damageable, mostly player.<br>
-                    <!-- <img src="images/dc1.jpg"> -->
+                    <img src="images/ItemCode.png">
                     Considering that designers will collaborate on items throughout the development, I created a designer-friendly system so they can easily test and tweak the item strength during the test by simply changing the attributes on the inspector.
-                    <!-- <li>Worked with a team of 9 developers in CMPM 170 to create a 3D puzzle game.</li>
+                    <img src="images/ItemInspector.png">
+                    \<!-- <li>Worked with a team of 9 developers in CMPM 170 to create a 3D puzzle game.</li>
                     <li>Used Unity, C#, and GitHub throughout the development.</li>
                     <li>Developed scripted game events of two puzzle rooms and 3D player controller.</li>
                     <li>Designed and implemented one puzzle room (raccoon rhythm puzzle room).</li>
