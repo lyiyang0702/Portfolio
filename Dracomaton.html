@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400&family=Montserrat:ital,wght@0,300;1,300&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>My Works</title>
+    <link rel="icon" type="image/x-icon" href="website-icon.png">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous">
+        </script>
+    <script>
+        $(function () {
+            $('#header').load("header.html");
+            $('#footer').load("footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+
+    <section class="projects">
+
+        <div class="project-title">
+            <h1 id="project-title"> Dracomaton (2023)</h1>
+            <div class="interactive">
+                <a href="https://store.steampowered.com/app/2457890/DRACOMATON/" target="_blank" rel="noopener noreferrer"
+                    class="btn_2"> Play Now</a>
+                <a href="https://gun-jumpers.itch.io/dracomaton" target="_blank" rel="noopener noreferrer"
+                    class="btn_2"> Demo</a>
+                <i class="fa fa-github" id="icon" onclick="location.href = 'https://github.com/GunJumpers/GunJumpers'"
+                    target="_blank" rel="noopener noreferrer" style="cursor:pointer" title="source code"></i>
+                <i class="fa fa-steam" id="icon"
+                    onclick="location.href = 'https://store.steampowered.com/app/2457890/DRACOMATON/'" target="_blank"
+                    rel="noopener noreferrer" style="cursor:pointer"></i>
+            </div>
+            <b>Undergraduat Capstone project </b> <br>
+        </div>
+
+        <!-- description -->
+
+        <div class="title">
+            <div class="cover">
+                <video autoplay loop controls>
+                    <source src="video/dracomaton.mp4" type="video/mp4">
+                </video>
+
+                <a href="https://www.youtube.com/@gunjumpers" target="_blank" rel="noopener noreferrer"
+                    class="btn_2"> More</a>
+                <div class="pics">
+                    <img src="images/dc1.jpg">
+                    <img src="images/dc2.jpg">
+                    <img src="images/dc3.jpg">
+                    <img src="images/dc4.jpg">
+                    <img src="images/dc5.jpg">
+                </div>
+            </div>
+            <div class="game-info">
+                <div class="description">
+                    <b>Dracomaton</b> is a top-down roguelike bullet hell where you swap between multiple playstyles on the fly. 
+                    Equip yourself with various Forms that have different strengths and weaknesses, OR Mod existing Forms with the characteristics of other ones!
+
+                </div>
+                <div class="contribution">
+                    <h2 id="project-title">What part did you do? </h2>
+                     
+                    <li>Item System/Item: </li>
+                    In Dracomaton, an item is an object that can have negative or positive effects on player which adds a lot of variances to gameplay.<br>
+                    I was responsible for initializing the framework of item system, including how to create a new item; how to make each item has its unique effect; how to apply item’s effect to player etc.<br>
+                    To resolve those problems, I have used Unity’s <b>ScriptableObjects</b> to create a base class: <b>BaseItem</b>, which all the future items can inherit from. Each base item has its own info such as id, icon, and Item Stats Mods & Item Status Mods are the part that takes care of item’s unique effect. The way it works is that when the Apply function in base item script get called, it will add all the mods(aka. effects) to its host damage source/damageable, mostly player.<br>
+                    <!-- <img src="images/dc1.jpg"> -->
+                    Considering that designers will collaborate on items throughout the development, I created a designer-friendly system so they can easily test and tweak the item strength during the test by simply changing the attributes on the inspector.
+                    <li>Worked with a team of 9 developers in CMPM 170 to create a 3D puzzle game.</li>
+                    <li>Used Unity, C#, and GitHub throughout the development.</li>
+                    <li>Developed scripted game events of two puzzle rooms and 3D player controller.</li>
+                    <li>Designed and implemented one puzzle room (raccoon rhythm puzzle room).</li>
+                    <li>Coordianted with sound artists during developing to make sure we were at the same page.</li>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <!-- <div>
+        <h2>Design Details</h2>
+        <p><a
+                href="https://docs.google.com/presentation/d/1MdtTKm_kEejC5-dENBHoSK-WHHb_aEeLbEA8JtSirbc/edit?usp=sharing">Design
+                Slides</a></p>
+    </div> -->
+
+    </section>
+    <div id="footer"></div>
+</body>
+
+</html>

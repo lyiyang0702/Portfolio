@@ -1,5 +1,4 @@
 .container {
-    background-color: antiquewhite;
     padding: 1%;
     width: 100%;
 }
@@ -7,7 +6,7 @@
 .text-box {
     width: 90%;
     position: relative;
-    margin-top: 10%;
+    margin-top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -113,6 +112,28 @@
     backface-visibility: hidden;
 }
 
+.tags{
+    margin: 3%;
+    display: flex;
+    text-decoration: none;
+}
+
+.tags .tag1{
+    margin: 1%;
+    border-radius: 5px;
+    background-color: aquamarine;
+    padding: 5px 10px;
+    font-size: 1em;
+}
+
+.tags .tag2{
+    margin: 1%;
+    border-radius: 5px;
+    background-color:brown;
+    padding: 5px 10px;
+    font-size: 1em;
+}
+
 .projects-col .project-description {
     transition: .5s ease;
     font-size: 0.8em;
@@ -143,6 +164,9 @@
   }
 
 @media(max-width: 700px) {
+    .container{
+        margin-top: 50%;
+    }
     .text-box {
         margin-top: 30%;
     }
@@ -167,4 +191,7 @@
         margin-top: 10%;
     }
 
+    .text{
+       font-size: larger;
+    }
 }

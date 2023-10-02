@@ -6,11 +6,21 @@
 
 .title{
     line-height: 2em;
-    display: flex;
+    display: grid;
     justify-content: center;
+text-align: center;
     gap: 3em
 }
+.project-title{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2em;
+    margin-bottom: 0.3em;
+    text-align: center;
+}
 
+.interactive{
+    display: block;
+}
 .cover {
     width: 60%;
     text-align: center;
@@ -24,22 +34,19 @@
     display: inline-block;
 }
 
-.interactive{
-    display: block;
-}
-.description{
-    inline-size: 22em;
+.game-info{
+    display: gird;
     overflow-wrap: break-all;
+}
+
+.description{
+    inline-size: 22em;  
 }
 
 .contribution{
     margin-top: 5%;
 }
-#project-title{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 2em;
-    margin-bottom: 0.3em;
-}
+
 #icon{
     font-size: 2em;
 }
@@ -77,6 +84,7 @@
 
 .contribution{
     margin-top: 5%;
+  overflow: hidden;
 }
 
 .contribution li{
@@ -86,11 +94,14 @@
 
 @media(max-width: 700px) {
 
-    .description{
-        order: 1;
+    .project-title{
+        font-size: smaller;
+    }
+    .game-info{
+        order: 2;
     }
     .cover{
-        order: 2;
+        order: 1;
     }
     .pics img{
         width: 50%;
