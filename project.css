@@ -8,7 +8,7 @@
     line-height: 2em;
     display: grid;
     justify-content: center;
-text-align: center;
+    justify-items: center;
     gap: 3em
 }
 .project-title{
@@ -35,13 +35,13 @@ text-align: center;
 }
 
 .game-info{
-    display: gird;
+    inline-size: 30em; 
     overflow-wrap: break-all;
 }
-
+/* 
 .description{
     inline-size: 22em;  
-}
+} */
 
 .contribution{
     margin-top: 5%;
