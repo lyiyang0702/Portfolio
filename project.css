@@ -42,10 +42,10 @@
     inline-size:100%; 
     /* overflow-wrap: hidden; */
 }
-/* 
+
 .description{
-    inline-size: 22em;  
-} */
+    font-size: larger; 
+}
 
 .contribution{
     margin-top: 5%;
@@ -92,6 +92,10 @@ margin-top: 5%;
 }
 
 .contribution li{
+    background-color:rgb(216, 151, 207);
+    margin-bottom: 3%;
+    margin-TOP: 3%;
+    width: fit-content;
     font-family: 'League Spartan', sans-serif;
     font-size: larger;
 }

@@ -66,3 +66,14 @@ nav{
     margin: 40px 0 40px;
     font-size: 40px;
 }
+
+.about { 
+    font-family: 'League Spartan', sans-serif;
+    font-size: larger;
+    inline-size:100%;
+    line-height:50px;
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
