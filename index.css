@@ -135,9 +135,10 @@
 }
 
 .tags .tag3{
+    color: aliceblue;
     margin: 1%;
     border-radius: 5px;
-    background-color:blueviolet;
+    background-color:blue;
     padding: 5px 10px;
     font-size: 1em;
 }
