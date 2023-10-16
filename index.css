@@ -134,6 +134,14 @@
     font-size: 1em;
 }
 
+.tags .tag3{
+    margin: 1%;
+    border-radius: 5px;
+    background-color:blueviolet;
+    padding: 5px 10px;
+    font-size: 1em;
+}
+
 .projects-col .project-description {
     transition: .5s ease;
     font-size: 0.8em;
