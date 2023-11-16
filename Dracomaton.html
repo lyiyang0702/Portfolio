@@ -77,106 +77,95 @@
                 <div class="contribution">
                     <h2 id="project-title">What part did I do? </h2>
 
-                    <li >Item System/Item <i class= "fa fa-caret-down" onclick="hideBlock('item')" style="cursor:pointer"></i> </li>
+                    <li>Item System/Item <i class="fa fa-caret-down" onclick="hideBlock('item')"
+                            style="cursor:pointer"></i> </li>
                     <div id="item" style="display: none;">
-                        In Dracomaton, an item is an object that can have negative or positive effects on player which
-                        adds a lot of variances to gameplay.<br>
+                        In Dracomaton, items play a crucial role by introducing both positive and negative effects on
+                        players that significantly impact gameplay. <br>
                         <img src="images/dc11.gif">
                         <img src="images/ItemOverview.png"><br>
-                        I was responsible for initializing the framework of item system, including how to create a new
-                        item; how to make each item has its unique effect; how to apply item’s effect to player etc.<br>
-                        To resolve those problems, I have used Unity’s <b>ScriptableObjects</b> to create a base class:
-                        <b>BaseItem</b>, which all the future items can inherit from. Each base item has its own info
-                        such as id, icon, and Item Stats Mods & Item Status Mods are the part that takes care of item’s
-                        unique effect. The way it works is that when the Apply function in base item script get called,
-                        it will add all the mods(aka. effects) to its host damage source/damageable, mostly player.<br>
+                        My responsibilities involved establishing the foundation for the item system. This encompassed
+                        creating a framework for generating new items, adding distinctive effects to each item, and
+                        implementing the mechanics for applying these effects to the player. To achieve this, I used
+                        Unity's ScriptableObjects to devise a base class, BaseItem, which serves as the base prefabs for
+                        all future items. Each base item owns unique attributes such as id, icon, and employs Item Stats
+                        Mods & Item Status Mods to manage its distinctive effects. When the Apply function in the base
+                        item script gets called, it will add all the mods(aka. effects) to its host damage
+                        source/damageable, mostly player.
+                        <br>
                         <img src="images/ItemCode.png"><br>
-                        Considering that designers will collaborate on items throughout the development, I created a
-                        designer-friendly system so they can easily test and tweak the item strength during the test by
-                        simply changing the attributes on the inspector.<br>
+                        Considering that designers will collaborate on items throughout the development, I designed a
+                        user-friendly system that allows designers to swiftly test and tweak item attributes during
+                        tests by adjusting parameters directly in the Inspector.<br>
                         <img src="images/ItemInspector.png"><br>
                     </div>
-                    <li >Resources Management System (Rewards,
-                        Shops) <i class= "fa fa-caret-down" onclick="hideBlock('resources')" style="cursor:pointer"></i></li>
+                    <li>Resources Management System (Rewards,
+                        Shops) <i class="fa fa-caret-down" onclick="hideBlock('resources')" style="cursor:pointer"></i>
+                    </li>
                     <div id="resources" style="display: none;">
 
                         In Dracomaton, random objects need to be spawned on the map under different situations, for
-                        example, shop items are randomly selected from all the items in the game. Therefore, I created a
-                        <b>Resource Management System</b> to organize all the rewards/resources in the game to work as a
-                        general helper function, including every type of resource, such as UI icons, Damage Text, and
-                        even VFX. Both the <b>Shop system</b> and <b>Reward system</b> utilized the Resource Manager.
-
+                        example, shop items are randomly selected from all the items in the game. To address the random
+                        spawning of objects, including shop items. This system organizes all game resources, such as UI
+                        icons, Damage Text, and VFX, into a unified structure.<br>
                         <h2> Resources Manager</h2>
-                        To explain how the resource management system works, the <b>ResourcesManager.cs</b> is a
-                        singleton
-                        class that fetches resource objects (prefabs) from the project folders to separate lists when
-                        awake.<br>
+                        The Resource Manager, implemented as a singleton class, efficiently fetches resource objects and
+                        categorizes them based on type when awake.<br>
                         <img src="images/ResourcesManager.png"> <img src="images/fetchItem.png"> <img
                             src="images/rmscript.png"><br>
-                        For code clarity, I made all the individual managers as a partial class of
-                        <b>ResourcesManager.cs</b>, which allows each resource type to have its own
-                        manager to make the code more readable and generate a random object more easily by just calling
-                        the function in the corresponding manager-script. Since each manager script is individual,
-                        programmers can create many single manager scripts without complicated primary resources manager
-                        script.<br>
+                        For code clarity, I used partial class to separate the code into different files. Individual
+                        resource managers also make generating a random object more easily by just calling the function
+                        in the corresponding manager script, and programmers can create many single manager scripts
+                        without complicated primary resources manager script.<br>
+
                         <img src="images/returnItems.png"><br>
 
                         <h2> Reward System</h2>
-                        For the reward system, In Dracomaton, players will get different rewards (Items, Forms etc.)
-                        based on the room they entered and finished, for example, clearing a health room will reward the
-                        player a health portion. <br>
+                        In Dracomaton, players receive varied rewards based on the type of room they complete,
+                        for example, clearing a health room will reward the player a health portion. <br>
                         <img src="images/dc8.gif"> <img src="images/dc10.gif"><br>
-                        Various room types will emerge in the game loop as the game progresses.
-                        When a new room is loaded, the reward spawner script will decide the reward type from the current
-                        room’s type (stored in the room controller). After the player clears the room, the reward script
-                        will detect the tiles on the tilemap in a specific range to ensure the reward spawns in a
-                        reachable place (not water). If the reward type is items or forms, the reward will be the
-                        items/objects randomly returned by their manager script.<br>
+                        The Reward Spawner selects the reward type based on the current room's type from reading the
+                        current room controller, and the Reward Script ensures appropriate spawning within reachable
+                        areas (e.g. avoid water area) near the player.
+                        <br>
 
                         <img src="images/rewardSpawners.png"> <img src="images/spawnRewards.png"><br>
-                        Various room types will emerge in the game loop as the game progresses. Therefore, I created a
-                        resource management system to organize all the rewards/resources in the game to work as a
-                        general helper function, including every type of resource, such as UI icons, Damage Text, and
-                        even VFX.<br>
 
 
                         <h2> Shop System</h2>
-                        I was responsible for offering three shop items (mostly the same object as
-                        rewards) in the shop room for players. One of the three items is always a Health portion for
-                        game balance reason and the other two can be randomly chosen from any possible objects. <br>
+                        As for the Shop System, I was responsible for offering three shop items (mostly the same object
+                        as rewards) in the Shop room to players. One item is always a Health portion for game balance,
+                        and the other is a random type of object (items, forms, etc). <br>
                         <img src="images/dc9.gif"><br>
-                        The way I fulfill these is by making a shop item position prefab that has been preset a spawning
-                        method,
-                        which allows it to be easily moved to any position on the screen and it is. For example, if the
-                        item type is Random, it means this position will spawn a random item, otherwise, it will only
-                        spawn the selected type of item. Once the shop room is awake, the shop room manager will
-                        populate three shop item positions in the game.
+                        A prefab with preset spawning methods facilitates the placement of shop items on the screen,
+                        which can be easily placed in any position on the map. Shop Room Manager populates three shop
+                        item positions, and the attached Shop Item Spawning Script manages object spawning on these
+                        positions. The variable "Item Type" in the spawning script decides the type of spawned objects,
+                        for instance, if item type is Random, it means this position will spawn a random object,
+                        otherwise, it will only spawn the selected type of item.<br>
+
                         <img src="images/shopItem.png"> <img src="images/shopItem1.png"> <br>
 
                     </div>
-                    <li > UI <i class= "fa fa-caret-down" onclick="hideBlock('mod')" style="cursor:pointer"></i></li>
+                    <li> UI <i class="fa fa-caret-down" onclick="hideBlock('mod')" style="cursor:pointer"></i></li>
                     <div id="mod" style="display: none;">
 
                         <h2> Mod Menu </h2>
-                        Mod Menu is the UI that is highly releated to Dracomaton's core gameplay, Forms and Mods. There
-                        are two types of slots in the game: the
+                        Mod Menu is the crucial game UI in Dracomaton. There are two types of slots on the menu: the
                         upper slots are Form slots, and the lower slots are Mods slots. The mechanics of Dracomaton is
                         that players can switch the form and mod by swapping their positions. For example, if players
                         drag Fire Form to the Construct Form’s mod slot, the code will automatically unequip Fire Form
                         and turn it into Construct Form’s mod. <br>
                         <img src="images/dc6.gif"><br>
-                        I created the mod menu functions from scratch, including implementing UI assets, implementing
-                        drag and drop functionals, and connecting UI with backend codes. n game design, switching
-                        between forms and mods has various restrictions; for example, you can’t mod the same form (e.g.
-                        construct mod can’t mod construct form), or you can’t equip the same Form twice, etc. I have
-                        considered all these edge cases in UI to indicate to players the correct way to equip mods and
-                        forms.
+                        I crafted this feature from scratch, integrating UI assets, functions, and connecting them to
+                        backend codes. Consideration was given to various restrictions, such as preventing the same form
+                        from being modded or equipped twice, ensuring the player understands our mechanics correctly.<br>
                         <img src="images/dc7.gif"><br>
                         <h2> Item Menu</h2>
                         Item Menu UI will pop out with three item options when the player clears an item room, and they
                         can read through the item description to select one to apply. They simply need to click the card
                         to use the item. If the item pool has less than three available items, it will only spawn two
-                        items for selection.
+                        items for selection.<br>
                         <img src="images/dc11.gif"> <img src="images/itemSelection.png"><br>
 
                         Both the Mod Menu and Item Menu panels are toggleable.

@@ -49,8 +49,15 @@
 
 .contribution{
     margin-top: 5%;
+    font-size: large;
 }
 
+.contribution video{
+    width: 100%;
+}
+.contribution img{
+    width: 100%;
+}
 #icon{
     font-size: 2em;
 }
