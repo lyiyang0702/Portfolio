@@ -89,7 +89,7 @@
 }
 
 .pics img:hover{
-    scale: 200%;
+    scale: 500%;
     position: inherit;
 }
 
