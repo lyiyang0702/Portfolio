@@ -157,7 +157,8 @@
     text-align: center;
 }
 .text{
-    text-align: left;
+    text-align: center;
+    font-size: large;
 }
 .text b {
     color: brown;
