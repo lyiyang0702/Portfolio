@@ -35,15 +35,11 @@
         <div class="project-title">
             <h1 id="project-title"> Witch Rider (2023)</h1>
             <div class="interactive">
-                <a href="https://store.steampowered.com/app/2457890/DRACOMATON/" target="_blank"
-                    rel="noopener noreferrer" class="btn_2"> Play Now</a>
-                <a href="https://gun-jumpers.itch.io/dracomaton" target="_blank" rel="noopener noreferrer"
-                    class="btn_2"> Demo</a>
-                <i class="fa fa-github" id="icon" onclick="location.href = 'https://github.com/GunJumpers/GunJumpers'"
-                    target="_blank" rel="noopener noreferrer" style="cursor:pointer" title="source code"></i>
-                <i class="fa fa-steam" id="icon"
-                    onclick="location.href = 'https://store.steampowered.com/app/2457890/DRACOMATON/'" target="_blank"
-                    rel="noopener noreferrer" style="cursor:pointer"></i>
+                <a href="https://weisa.itch.io/witch-riders" target="_blank" rel="noopener noreferrer" class="btn_2">
+                    Play Now</a>
+                <i class="fa fa-github" id="icon"
+                    onclick="location.href = 'https://github.com/theweisa/GAME200VerbsGame'" target="_blank"
+                    rel="noopener noreferrer" style="cursor:pointer" title="source code"></i>
             </div>
         </div>
 
@@ -68,18 +64,22 @@
             </div>
             <div class="game-info">
                 <div class="description">
-                    <b>Dracomaton</b> is a top-down roguelike bullet hell where you swap between multiple playstyles on
-                    the fly.
-                    Equip yourself with various Forms that have different strengths and weaknesses, or Mod existing
-                    Forms with the characteristics of other ones!
+                    <b>Witch Skater</b> is a multiplayer game and the goal is to use the fans to propel yourself or blow
+                    others into traps or off the map with a big fan.<br>
+                    The prompt of this game is to design a game around two
+                    verbs: <b>Skate</b> and <b>Blow</b> . We went through a variety of pitches before settling on making a PVP
+                    platformer arena game with players on skateboards and giant fans. The physics and movement of the
+                    game simulate a skateboard, with no friction and being carried by your momentum, and the blow aspect
+                    was incorporated through the large fans the players carried.
+
 
                 </div>
                 <div class="contribution">
                     <h2 id="project-title">What part did I do? </h2>
 
-                    <li>Item System/Item <i class="fa fa-caret-down" onclick="hideBlock('item')"
+                    <li>Local Multiplayer <i class="fa fa-caret-down" onclick="hideBlock('multi')"
                             style="cursor:pointer"></i> </li>
-                    <div id="item" style="display: none;">
+                    <div id="multi" style="display: none;">
                         In Dracomaton, items play a crucial role by introducing both positive and negative effects on
                         players that significantly impact gameplay. <br>
                         <img src="images/dc11.gif">
@@ -99,10 +99,9 @@
                         tests by adjusting parameters directly in the Inspector.<br>
                         <img src="images/ItemInspector.png"><br>
                     </div>
-                    <li>Resources Management System (Rewards,
-                        Shops) <i class="fa fa-caret-down" onclick="hideBlock('resources')" style="cursor:pointer"></i>
+                    <li> UI Programming <i class="fa fa-caret-down" onclick="hideBlock('ui')" style="cursor:pointer"></i>
                     </li>
-                    <div id="resources" style="display: none;">
+                    <div id="ui" style="display: none;">
 
                         In Dracomaton, random objects need to be spawned on the map under different situations, for
                         example, shop items are randomly selected from all the items in the game. To address the random
@@ -145,31 +144,6 @@
                         otherwise, it will only spawn the selected type of item.<br>
 
                         <img src="images/shopItem.png"> <img src="images/shopItem1.png"> <br>
-
-                    </div>
-                    <li> UI <i class="fa fa-caret-down" onclick="hideBlock('mod')" style="cursor:pointer"></i></li>
-                    <div id="mod" style="display: none;">
-
-                        <h2> Mod Menu </h2>
-                        Mod Menu is the crucial game UI in Dracomaton. There are two types of slots on the menu: the
-                        upper slots are Form slots, and the lower slots are Mods slots. The mechanics of Dracomaton is
-                        that players can switch the form and mod by swapping their positions. For example, if players
-                        drag Fire Form to the Construct Form’s mod slot, the code will automatically unequip Fire Form
-                        and turn it into Construct Form’s mod. <br>
-                        <img src="images/dc6.gif"><br>
-                        I crafted this feature from scratch, integrating UI assets, functions, and connecting them to
-                        backend codes. Consideration was given to various restrictions, such as preventing the same form
-                        from being modded or equipped twice, ensuring the player understands our mechanics correctly.<br>
-                        <img src="images/dc7.gif"><br>
-                        <h2> Item Menu</h2>
-                        Item Menu UI will pop out with three item options when the player clears an item room, and they
-                        can read through the item description to select one to apply. They simply need to click the card
-                        to use the item. If the item pool has less than three available items, it will only spawn two
-                        items for selection.<br>
-                        <img src="images/dc11.gif"> <img src="images/itemSelection.png"><br>
-
-                        Both the Mod Menu and Item Menu panels are toggleable.
-
 
                     </div>
                 </div>
