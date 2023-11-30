@@ -35,7 +35,7 @@
         <div class="project-title">
             <h1 id="project-title"> Row/Col Cultivation (2023)</h1>
             <div class="interactive">
-                <a href="https://docs.google.com/spreadsheets/d/1NkeowTk1cEI7Di2R4-ZPosCScGhhAhfXH8Hk2MRp0Qk/edit?usp=sharing"
+                <a href="https://docs.google.com/spreadsheets/d/1eAYiC0YUwQTkgBDqj0cnWbwjuiQ8lefbYik4R1jsPus/edit?usp=sharing"
                     target="_blank" rel="noopener noreferrer" class="btn_2"> Play Now</a>
             </div>
         </div>
@@ -62,33 +62,34 @@
 
             <div class="game-info">
                 <div class="description">
-                    <b>Dracomaton</b> is a top-down roguelike bullet hell where you swap between multiple playstyles on
-                    the fly.
-                    Equip yourself with various Forms that have different strengths and weaknesses, or Mod existing
-                    Forms with the characteristics of other ones!
+                    <b>Row/Col Cultivation </b>is a farming puzzle game in Google Spreadsheets. The player cultivates
+                    different kinds of flowers, all of which can combine to create new flowers and have their own growth
+                    pattern. Some grow up, some grow down, and some grow diagonal! The game's core is learning and
+                    mastering these behaviors to hit the required number of crops with your limited number of days and
+                    seeds.
 
                 </div>
                 <div class="contribution">
                     <h2 id="project-title">What part did I do? </h2>
 
-                    <li>Item System/Item <i class="fa fa-caret-down" onclick="hideBlock('item')"
-                            style="cursor:pointer"></i> </li>
-                    <div id="item" style="display: none;">
-                        In Dracomaton, an item is an object that can have negative or positive effects on player which
-                        adds a lot of variances to gameplay.<br>
-                        <img src="images/ItemOverview.png"><br>
-                        I was responsible for initializing the framework of item system, including how to create a new
-                        item; how to make each item has its unique effect; how to apply item’s effect to player etc.<br>
-                        To resolve those problems, I have used Unity’s <b>ScriptableObjects</b> to create a base class:
-                        <b>BaseItem</b>, which all the future items can inherit from. Each base item has its own info
-                        such as id, icon, and Item Stats Mods & Item Status Mods are the part that takes care of item’s
-                        unique effect. The way it works is that when the Apply function in base item script get called,
-                        it will add all the mods(aka. effects) to its host damage source/damageable, mostly player.<br>
-                        <img src="images/ItemCode.png"><br>
-                        Considering that designers will collaborate on items throughout the development, I created a
-                        designer-friendly system so they can easily test and tweak the item strength during the test by
-                        simply changing the attributes on the inspector.<br>
-                        <img src="images/ItemInspector.png"><br>
+                    <li>UI&Art Assets <i class="fa fa-caret-down" onclick="hideBlock('ui')" style="cursor:pointer"></i>
+                    </li>
+                    <div id="ui" style="display: none;">
+
+                        I was responsible for implementing art assets and designing the UI for this game. Given the
+                        complexity of inserting images through app scripts in Google Sheets, I used an Asset Sheet to
+                        store all art assets efficiently. This approach allows easy copying and pasting of specific
+                        assets with their cell numbers, from the Asset Sheet into the Game Sheet.<br>
+                        In-game UI includes Next Day Button, Restart Button, Next Level Button, and Game Stats Panel. To
+                        ensure real-time updates of game statistics while the game is in progress, I created an
+                        additional sheet to track the values of each stat, organized in a dictionary-like structure with
+                        key-value pairs. Changes in stat numbers will trigger the UpdateInGameUI function, dynamically
+                        fetching the current key's value and updating the UI accordingly.<br>
+                        Additionally, for the consideration of better user experience, I added a feature where the text
+                        color of collected crop numbers is red if they are less than the goal. Therefore, the
+                        SetTextFormat function is required for parsing the string value in the cell and adjusting the
+                        color for specific characters based on the stats value.<br>
+
                     </div>
                     <li>Resources Management System (Rewards,
                         Shops) <i class="fa fa-caret-down" onclick="hideBlock('resources')" style="cursor:pointer"></i>
