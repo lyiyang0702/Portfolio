@@ -45,10 +45,10 @@
         <div class="title">
             <div class="cover">
                 <video autoplay loop controls>
-                    <source src="video/dracomaton.mp4" type="video/mp4">
+                    <source src="video/SpreadSheetGame.mp4" type="video/mp4">
                 </video>
 
-                <a href="https://www.youtube.com/@gunjumpers" target="_blank" rel="noopener noreferrer" class="btn_2">
+                <a href="https://youtu.be/Q_dLQF8hIP4" target="_blank" rel="noopener noreferrer" class="btn_2">
                     More</a>
                 <div class="pics">
                     <img src="images/spreadsheet1.png">
@@ -80,11 +80,13 @@
                         complexity of inserting images through app scripts in Google Sheets, I used an Asset Sheet to
                         store all art assets efficiently. This approach allows easy copying and pasting of specific
                         assets with their cell numbers, from the Asset Sheet into the Game Sheet.<br>
+                        <img src="images/assetSheet.png"><br>
                         In-game UI includes Next Day Button, Restart Button, Next Level Button, and Game Stats Panel. To
                         ensure real-time updates of game statistics while the game is in progress, I created an
                         additional sheet to track the values of each stat, organized in a dictionary-like structure with
                         key-value pairs. Changes in stat numbers will trigger the UpdateInGameUI function, dynamically
                         fetching the current key's value and updating the UI accordingly.<br>
+                        <img src="images/"><br>
                         Additionally, for the consideration of better user experience, I added a feature where the text
                         color of collected crop numbers is red if they are less than the goal. Therefore, the
                         SetTextFormat function is required for parsing the string value in the cell and adjusting the
