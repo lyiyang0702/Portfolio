@@ -51,7 +51,6 @@
     margin-top: 5%;
     font-size: large;
 }
-
 .contribution video{
     width: 100%;
 }
@@ -98,7 +97,15 @@ margin-top: 5%;
   overflow: hidden;
 }
 
+.contribution ul{
+    list-style-type: disc;    /* Bullet points */
+    margin-left: 20px;        /* Indentation for the list */
+}
+
 .contribution li{
+    margin-bottom: 10px;
+}
+.contribution h2{
     background-color:rgb(216, 151, 207);
     margin-bottom: 3%;
     margin-TOP: 3%;
