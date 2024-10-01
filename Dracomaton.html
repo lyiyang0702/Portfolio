@@ -77,9 +77,87 @@
 
                 </div>
                 <div class="contribution">
-                    <h2 id="project-title">What part did I do? </h2>
-
-                    <li>Item System/Item <i class="fa fa-caret-down" onclick="hideBlock('item')"
+                    <h1 id="project-title">What part did I do? </h1>
+                    <h2>Drag-and-Drop System for Mods<i class="fa fa-caret-down" onclick="hideBlock('dragdrop')"
+                            style="cursor:pointer"></i></h2>
+                    <div id="dragdrop" style="display: none;">
+                        <ul>
+                            <li><strong>Interface-driven Design:</strong> Implemented the drag-and-drop
+                                functionality using Unity’s
+                                <strong>IDropHandler, IBeginDragHandler, and IDragHandler</strong> interfaces to
+                                enable seamless item movement between slots​​.
+                            </li>
+                            <li><strong>Event-driven Feedback:</strong> Utilized <strong>UnityEvents</strong> o
+                                trigger updates and validate drop actions, ensuring dynamic responses and visual
+                                feedback when items are dropped or swapped​.
+                            </li>
+                            <li><strong>Prefab Instantiation:</strong> Dynamically created draggable items using
+                                prefabs, allowing for modular and reusable UI, where new items can be easily
+                                instantiated and updated visually​​.</li>
+                            <li><strong>Dynamic UI Updates:</strong> Managed forms and mods within the UI by
+                                dynamically instantiating draggable items when mods are
+                                added/removed, ensuring real-time inventory updates​​.</li>
+                        </ul>
+                    </div>
+                    <h2>Form and Mod System<i class="fa fa-caret-down" onclick="hideBlock('forms/mod')"
+                            style="cursor:pointer"></i></h2>
+                    <div id="forms/mod" style="display: none;">
+                        <ul>
+                            <li><strong>Modular Design Pattern:</strong> Designed <b>FormUnit.cs</b> to allow forms to
+                                hold multiple mods in a modular manner. Mods can be attached, removed, or replaced
+                                dynamically using collections​.</li>
+                            <li><strong>Inheritance and Polymorphism:</strong> Developed a class hierarchy where forms
+                                and mods
+                                inherit from base classes like BaseMod, enabling shared behavior and customization
+                                for specific mods or forms​​.</li>
+                            <li><strong>Resource Loading:</strong>Utilized <strong>Resources.LoadAll</strong> to dynamically
+                                    fetch and load items at runtime, enabling easy expansion of the inventory with new
+                                    items​​.</li>
+                        </ul>
+                    </div>
+                    <h2>Item System and Customization<i class="fa fa-caret-down" onclick="hideBlock('item')"
+                            style="cursor:pointer"></i></h2>
+                    <div id="item" style="display: none;">
+                        <ul>
+                            <li><strong>Inheritance and Polymorphism:</strong>Developed the <strong>BaseItem</strong>
+                                class as a
+                                foundation for all items, allowing shared behavior like <strong>cooldown
+                                    management</strong> and custom
+                                logic for specific items​​.</li>
+                            <li><strong>Stat Modification via Composition:</strong> Used <strong>StatsModifier</strong>
+                                collections to
+                                apply or remove bonuses/penalties dynamically when items are equipped, allowing flexible
+                                stat modification​.</li>
+                            <li><strong>Cooldown Management:</strong> Implemented a cooldown system to
+                                ensure items have a balanced frequency of use and cannot be spammed​​.</li>
+                        </ul>
+                    </div>
+                    <h2>Shop System<i class="fa fa-caret-down" onclick="hideBlock('shop')" style="cursor:pointer"></i>
+                    </h2>
+                    <div id="shop" style="display: none;">
+                        <ul>
+                            <li><strong>Dynamic Item Spawning:</strong>Used weighted randomization to populate shops
+                                with a variety of items, ensuring each shop
+                                offers diverse inventory​​.</li>
+                            <li><strong>Event-driven Purchase Flow:</strong> Implemented an event-driven purchase system
+                                where player actions trigger events to deduct bolts and
+                                update the shop UI​.</li>
+                        </ul>
+                    </div>
+                    <h2>Reward Spawner System<i class="fa fa-caret-down" onclick="hideBlock('reward')"
+                            style="cursor:pointer"></i></h2>
+                    <div id="reward" style="display: none;">
+                        <ul>
+                            <li><strong>Event-driven Reward Spawning:</strong> Used <strong>UnityEvents</strong> to
+                                trigger reward drops after room completions, with different rewards based on the room
+                                type (e.g., Boss or Normal)​​.
+                                offers diverse inventory​​.</li>
+                            <li><strong>Dynamic Object Instantiation:</strong> Rewards like chests and health items are
+                                dynamically instantiated using prefabs at predefined locations, adding variety to the
+                                rewards players encounter​​.</li>
+                        </ul>
+                    </div>
+                    <!-- <li>Item System/Item <i class="fa fa-caret-down" onclick="hideBlock('item')"
                             style="cursor:pointer"></i> </li>
                     <div id="item" style="display: none;">
                         In Dracomaton, items play a crucial role by introducing both positive and negative effects on
@@ -173,7 +251,7 @@
                         Both the Mod Menu and Item Menu panels are toggleable.
 
 
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
