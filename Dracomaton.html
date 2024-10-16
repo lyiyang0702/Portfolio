@@ -78,7 +78,7 @@
                 </div>
                 <div class="contribution">
                     <h1 id="project-title">What part did I do? </h1>
-                    <h2>Drag-and-Drop System for Mods<i class="fa fa-caret-down" onclick="hideBlock('dragdrop')"
+                    <h2>Drag-and-Drop System<i class="fa fa-caret-down" onclick="hideBlock('dragdrop')"
                             style="cursor:pointer"></i></h2>
                     <div id="dragdrop" style="display: none;">
                         <ul>
@@ -86,17 +86,22 @@
                                 functionality using Unity’s
                                 <strong>IDropHandler, IBeginDragHandler, and IDragHandler</strong> interfaces to
                                 enable seamless item movement between slots​​.
+                                <img src="images/dc6.gif"><br>
                             </li>
                             <li><strong>Event-driven Feedback:</strong> Utilized <strong>UnityEvents</strong> o
                                 trigger updates and validate drop actions, ensuring dynamic responses and visual
                                 feedback when items are dropped or swapped​.
                             </li>
-                            <li><strong>Prefab Instantiation:</strong> Dynamically created draggable items using
+                            <!-- <li><strong>Prefab Instantiation:</strong> Dynamically created draggable items using
                                 prefabs, allowing for modular and reusable UI, where new items can be easily
-                                instantiated and updated visually​​.</li>
+                                instantiated and updated visually​​.
+                                
+                            </li> -->
                             <li><strong>Dynamic UI Updates:</strong> Managed forms and mods within the UI by
                                 dynamically instantiating draggable items when mods are
-                                added/removed, ensuring real-time inventory updates​​.</li>
+                                added/removed, ensuring real-time inventory updates​​.
+                                <img src="images/dc10.gif"><br>
+                            </li>
                         </ul>
                     </div>
                     <h2>Form and Mod System<i class="fa fa-caret-down" onclick="hideBlock('forms/mod')"
@@ -112,7 +117,10 @@
                                 for specific mods or forms​​.</li>
                             <li><strong>Resource Loading:</strong>Utilized <strong>Resources.LoadAll</strong> to dynamically
                                     fetch and load items at runtime, enabling easy expansion of the inventory with new
-                                    items​​.</li>
+                                    items​​.
+                                    <img src="images/rmscript.png"><br>
+                                    <img src="images/fetchItem.png"><br>
+                                </li>
                         </ul>
                     </div>
                     <h2>Item System and Customization<i class="fa fa-caret-down" onclick="hideBlock('item')"
@@ -123,13 +131,18 @@
                                 class as a
                                 foundation for all items, allowing shared behavior like <strong>cooldown
                                     management</strong> and custom
-                                logic for specific items​​.</li>
+                                logic for specific items​​.
+                                <img src="images/ItemOverview.png"><br>
+                                <img src="images/ItemInspector.png"><br>
+                            </li>
                             <li><strong>Stat Modification via Composition:</strong> Used <strong>StatsModifier</strong>
                                 collections to
                                 apply or remove bonuses/penalties dynamically when items are equipped, allowing flexible
-                                stat modification​.</li>
-                            <li><strong>Cooldown Management:</strong> Implemented a cooldown system to
-                                ensure items have a balanced frequency of use and cannot be spammed​​.</li>
+                                stat modification​.
+                                <img src="images/ItemCode.png"><br>
+                            </li>
+                            <!-- <li><strong>Cooldown Management:</strong> Implemented a cooldown system to
+                                ensure items have a balanced frequency of use and cannot be spammed​​.</li> -->
                         </ul>
                     </div>
                     <h2>Shop System<i class="fa fa-caret-down" onclick="hideBlock('shop')" style="cursor:pointer"></i>
@@ -138,10 +151,14 @@
                         <ul>
                             <li><strong>Dynamic Item Spawning:</strong>Used weighted randomization to populate shops
                                 with a variety of items, ensuring each shop
-                                offers diverse inventory​​.</li>
+                                offers diverse inventory​​.
+                                <img src="images/shopItem.png"><br>
+                            </li>
                             <li><strong>Event-driven Purchase Flow:</strong> Implemented an event-driven purchase system
                                 where player actions trigger events to deduct bolts and
-                                update the shop UI​.</li>
+                                update the shop UI​.
+                                <img src="images/dc9.gif"><br>
+                            </li>
                         </ul>
                     </div>
                     <h2>Reward Spawner System<i class="fa fa-caret-down" onclick="hideBlock('reward')"
@@ -151,10 +168,15 @@
                             <li><strong>Event-driven Reward Spawning:</strong> Used <strong>UnityEvents</strong> to
                                 trigger reward drops after room completions, with different rewards based on the room
                                 type (e.g., Boss or Normal)​​.
-                                offers diverse inventory​​.</li>
+                                offers diverse inventory​​.
+                                <img src="images/spawnRewards.png"><br>
+                                <img src="images/dc11.gif"><br>
+                            </li>
                             <li><strong>Dynamic Object Instantiation:</strong> Rewards like chests and health items are
                                 dynamically instantiated using prefabs at predefined locations, adding variety to the
-                                rewards players encounter​​.</li>
+                                rewards players encounter​​.
+                                <img src="images/rewardSpawners.png"><br>
+                            </li>
                         </ul>
                     </div>
                     <!-- <li>Item System/Item <i class="fa fa-caret-down" onclick="hideBlock('item')"

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400&family=Montserrat:ital,wght@0,300;1,300&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>My Works</title>
+    <link rel="icon" type="image/x-icon" href="website-icon.png">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous">
+        </script>
+    <script>
+        $(function () {
+            $('#header').load("header.html");
+            $('#footer').load("footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+
+    <section class="projects">
+
+        <div class="project-title">
+            <h1 id="project-title"> Alert The City (2024)</h1>
+            <div class="interactive">
+                <a href="https://teitoku-lowliet.itch.io/deck-fective" target="_blank" rel="noopener noreferrer"
+                    class="btn_2">
+                    Play Now</a>
+                <i class="fa fa-github" id="icon"
+                    onclick="location.href = 'https://github.com/lyiyang0702/Card-Collection-Game'" target="_blank"
+                    rel="noopener noreferrer" style="cursor:pointer" title="source code"></i>
+            </div>
+        </div>
+
+        <!-- description -->
+
+        <div class="title">
+            <div class="cover">
+                <video autoplay loop controls>
+                    <source src="video/AlertThe City.mkv" type="video/mkv">
+                </video>
+
+                <!-- <a href="https://www.youtube.com/@gunjumpers" target="_blank" rel="noopener noreferrer" class="btn_2">
+                    More</a> -->
+                <div class="pics">
+                    <img src="images/ccg (1).gif">
+                    <img src="images/ccg (2).gif">
+                    <img src="images/ccg (3).gif">
+                    <img src="images/ccg (4).gif">
+                </div>
+            </div>
+            <div class="game-info">
+                <div class="description">
+
+                    <strong>Alert the city</strong> is a a 3D top-down <strong>traffic simulation</strong> and
+                    <strong>educational
+                        game</strong> that teaches players about
+                    wildfire evacuation strategies. Player act as a community leader to make critical decisions during a
+                    wildfire
+                    evacuation to <strong>avoid loss and ensure safety</strong>. Each choice directly
+                    impacts the final results of evacuation, offering valuable lessons on emergency
+                    preparedness and
+                    response. With interactive scenarios and realistic challenges, this game provides a hands-on way to
+                    understand
+                    wildfire evacuation planning and safety.
+
+
+
+                </div>
+                <div class="contribution">
+                    <h1 id="project-title">What part did I do? </h1>
+                    <h2>RTraffic Simulation & AI System<i class="fa fa-caret-down" onclick="hideBlock('reward')"
+                            style="cursor:pointer"></i></h2>
+                    <div id="reward" style="display: none;">
+                        <ul>
+                            <li><strong>Dynamic Pathfinding:</strong> Utilized <code>A*</code> and
+                                <code>K-shortest path algorithms</code> for adaptable vehicle navigation, enabling cars
+                                to reroute based on traffic congestion and road conditions. A <code>CarAI</code> and
+                                <code>CarController</code> manage speed, collision avoidance, and honking responses.
+                            </li>
+                            <li><strong>Dynamic Object Instantiation:</strong> Rewards like chests and health items are
+                                dynamically instantiated using prefabs at predefined locations, adding variety to the
+                                rewards players encounter​​.
+                                <img src="images/rewardSpawners.png"><br>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h2>Player Movement and Interaction:<i class="fa fa-caret-down" onclick="hideBlock('player')"
+                            style="cursor:pointer"></i></h2>
+                    <div id="player" style="display: none;">
+                        <ul>
+                            <li><strong>Finite State Machine for Interactions:</strong> Used a <strong>Finite State
+                                    Machine
+                                    (FSM)</strong> for managing the state of interactable objects, ensuring player
+                                interactions are only possible under the correct conditions.</li>
+                            <li><strong>Input Management:</strong> Integrated Unity's <strong>Input System</strong> for
+                                seamless player control, handling both free-walking and grid-based movements within the
+                                same
+                                game system.</li>
+                            <li><strong>Raycasting for Environmental Interactions:</strong> Applied <strong>2D
+                                    Raycasting</strong> in the PlayerController for detecting interactable objects,
+                                optimizing performance while providing real-time interaction feedback.</li>
+                        </ul>
+                    </div>
+
+                    <h2>Enemy AI and Combat Mechanics:<i class="fa fa-caret-down" onclick="hideBlock('enemy')"
+                            style="cursor:pointer"></i></h2>
+                    <div id="enemy" style="display: none;">
+                        <ul>
+                            <li><strong>Shared Combat Logic (Inheritance):</strong> Utilized inheritance and
+                                polymorphism by
+                                extending a <strong>Damageable</strong> class for both player and enemies, allowing for
+                                shared functionality while enabling customization of unique behaviors like
+                                enemy-specific
+                                rewards.</li>
+                            <li><strong>Dynamic Enemy Attack Patterns:</strong> Managed enemy attack behavior with
+                                <strong>coroutines</strong>, introducing dynamic timing between actions and adapting
+                                attack
+                                routines based on game progression.
+                            </li>
+                            <li><strong>Difficulty Scaling:</strong> Adjusted enemy stats dynamically based on
+                                difficulty
+                                (Easy, Mid, Hard, Boss) using scaling logic to maintain challenge across the different
+                                areas
+                                of the game.</li>
+                        </ul>
+                    </div>
+                    <h2>UI and Visual Effects:<i class="fa fa-caret-down" onclick="hideBlock('ui')"
+                            style="cursor:pointer"></i></h2>
+                    <div id="ui" style="display: none;">
+                        <ul>
+                            <li><strong>Prefab-Based UI Design:</strong> Built a dynamic UI for cards and inventory
+                                using a
+                                <strong>prefab-based approach</strong>, enabling real-time instantiation and updates for
+                                card elements (CardUI.cs) during gameplay.
+                            </li>
+                            <li><strong>Event-Driven UI Updates:</strong> Employed event-driven programming to update
+                                the UI
+                                based on player and enemy status, ensuring real-time feedback for health, combat state,
+                                and
+                                inventory updates.</li>
+                            <li><strong>State-Driven UI Management:</strong> Implemented a state-driven UI, which
+                                dynamically adjusts based on the battle phases (e.g., disabling the card selection
+                                interface
+                                during EnemyTurn).</li>
+                        </ul>
+                    </div>
+                    <h2>Game and Level Management:<i class="fa fa-caret-down" onclick="hideBlock('level')"
+                            style="cursor:pointer"></i></h2>
+                    <div id="level" style="display: none;">
+                        <ul>
+                            <li><strong>Singleton Pattern for Managers:</strong> Utilized the <strong>Singleton
+                                    pattern</strong> for various management systems (e.g., GameManager,
+                                ResourceManager), ensuring global access and consistency throughout the game.</li>
+                            <li><strong>Dynamic Scene Loading:</strong> Managed scene transitions using Unity's
+                                <strong>SceneManager</strong>, allowing for smooth movement between different game areas
+                                while maintaining the player's state and progress.
+                            </li>
+                        </ul>
+                    </div>
+                    <h2>Resource Management:<i class="fa fa-caret-down" onclick="hideBlock('resource')"
+                            style="cursor:pointer"></i></h2>
+                    <div id="resource" style="display: none;">
+                        <ul>
+                            <li><strong>Weighted Randomization for Card Drops:</strong> Applied <strong>weighted random
+                                    algorithms</strong> to manage card drop rates, ensuring rare cards have a lower
+                                probability of appearing, balancing progression.</li>
+                            <li><strong>Data-Driven Card Management:</strong> Used <strong>ScriptableObjects</strong>
+                                for a modular, data-driven approach to manage card information, allowing for easy
+                                expansion and modification of the card pool.</li>
+                        </ul>
+                    </div>
+                    <!-- <li> UI <i class="fa fa-caret-down" onclick="hideBlock('multi')" style="cursor:pointer"></i> </li>
+                    <div id="multi" style="display: none;">
+                        In a PVP arena game, local multiplayer is very important as part of the core gameplay.
+                        Therefore, I have used Unity's <b>new input system</b> to facilitate gameplay for up to four
+                        players,
+                        each using distinct controllers. First, I created an Input Action Asset which organized all
+                        relevant in-game actions into a group of action maps, distinguishing between UI and Player
+                        controls.
+                        <br>
+                        <img src="images/UIActions_WR.png">
+                        <img src="images/PlayerActions_WR.png"><br>
+                        Next, I used the PlayerInput component within Unity’s new Input System to manage input across
+                        multiple players, customizing actions based on each player's input devices and unique action
+                        maps, for example, the controller player needs to press South Button to jump, but the keyboard
+                        needs to press Space. <br>
+                        <img src="images/playerInput.png"><br>
+
+                        However, the normal event system doesn’t support handling multiple UI
+                        input. To address this, I used an additional component called the "Input System UI Input
+                        Module," enabling the integration of the Input System with the UI system. This ensures players
+                        can seamlessly interact with UI elements, such as buttons and sliders on menu scenes or other UI
+                        scenes. For example, controller players can also navigate through buttons.
+                        <br>
+                        <img src="images/eventSystem.png"><br>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <!-- <div>
+        <h2>Design Details</h2>
+        <p><a
+                href="https://docs.google.com/presentation/d/1MdtTKm_kEejC5-dENBHoSK-WHHb_aEeLbEA8JtSirbc/edit?usp=sharing">Design
+                Slides</a></p>
+    </div> -->
+
+    </section>
+
+    <script>
+        function hideBlock(id) {
+            var x = document.getElementById(id);
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+    <div id="footer"></div>
+</body>
+
+</html>

@@ -55,7 +55,8 @@
     width: 100%;
 }
 .contribution img{
-    width: 100%;
+    width: 80%;
+    height: 50%;
 }
 #icon{
     font-size: 2em;
