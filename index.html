@@ -4,23 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <title>Yiyang Lu's Portfolio</title>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous">
-        </script>
-    <script>
-        $(function () {
-            $('#header').load("header.html");
-            $('#footer').load("footer.html");
-        });
-    </script>
+    <script src="utils.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 
-    <link rel="icon" type="image/x-icon" href="image/website-icon.png">
-    <link href="style.css" rel="stylesheet" type="text/css" href=“css/style.css” />
-    <link href="index.css" rel="stylesheet" type="text/css" href=“css/index.css” />
+    <link rel="icon" href="image/website-icon.png" type="image/x-icon">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -30,11 +22,87 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
 </head>
 
 <body>
+    <header id="header"></header>
 
-    <div id="header"></div>
+    <main class="container">
+        <section class="centered-content">
+            <h1>Yiyang Lu</h1>
+            <h3>Gameplay Programmer / UI Programmer / Game Designer</h3>
+            <a href="about.html" class="btn">Learn more about me</a>
+        </section>
+
+        <section class="games">
+            <div class="centered-content">
+                <h1 id="work">My Projects</h1>
+                <p>All the projects I've worked on!</p>
+                <p><a href="https://github.com/lyiyang0702" target="_blank">GitHub</a> | <a
+                        href="https://yiyang-lu.itch.io/" target="_blank">Itch</a></p>
+            </div>
+
+            <!-- Project Items (Example) -->
+            <div class="project-row">
+                <a href="Dracomaton.html" target="_blank" class="projects-col">
+                    <img src="images/DracomatonCover.gif" alt="Dracomaton Project">
+                    <div class="tags">
+                        <p class="tag1">C#</p>
+                        <p class="tag2">Unity</p>
+                        <p class="tag3">2D</p>
+                    </div>
+
+                    <div class="project-details">
+                        <h3 class="project-title">Dracomaton (2023)</h3>
+                        <p class="project-role">Gameplay & UI Programmer</p>
+                        <p class="project-description">
+                            This project is a 2D Top-down roguelike. I developed part of the core mechanics and its associated systems/UI.
+                        </p>
+                    </div>
+                </a>
+                
+                <a href="AlertTheCity.html" target="_blank" class="projects-col">
+                    <img src="images/ATCCover.gif" alt="Dracomaton Project">
+                    <div class="tags">
+                        <p class="tag1">C#</p>
+                        <p class="tag2">Unity</p>
+                        <p class="tag3">3D</p>
+                    </div>
+
+                    <div class="project-details">
+                        <h3 class="project-title">Alert The City (2024)</h3>
+                        <p class="project-role">Solo Programmer</p>
+                        <p class="project-description">
+                            This project is a 3D wildfire simulation. I programmed the whole game.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="FisherGame.html" target="_blank" class="projects-col">
+                    <img src="images/fisher2.gif" alt="Untitled Fisher Game">
+                    <div class="tags">
+                        <p class="tag1">C#</p>
+                        <p class="tag2">Unity</p>
+                        <p class="tag3">3D</p>
+                    </div>
+
+                    <div class="project-details">
+                        <h3 class="project-title">Untitled Fisher Game (2023)</h3>
+                        <p class="project-role">Gameplay & UI Programmer</p>
+                        <p class="project-description">
+                            This project is a 3D Fishing Game. I developed the Vechile System and Dynamic Trash Generation.
+                        </p>
+                    </div>
+                </a>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
+</body>
+<!-- <body>
+
+    <header id="header"></header>
     <div class="container">
         <div class="text-box">
             <h1>Yiyang Lu</h1>
@@ -42,7 +110,6 @@
             <a href="about.html" class="btn"> Learn more about me </a>
         </div>
     </div>
-    <!--Games-->
     <section class="games">
         <div class="introductions">
             <h1><a id="work"> My Projects</a></h1>
@@ -62,6 +129,21 @@
 
                 </div>
                 <a href="Dracomaton.html"><img src="images/dracomaton.png" style="width:100%" class="image"></a>
+                <div class="tags">
+                    <p class="tag1"> C# </p>
+                    <p class="tag2"> Unity</p>
+                    <p class="tag3"> 2D</p>
+                </div>
+            </div>
+
+            <div class="projects-col">
+                <div class="project-description">
+                    <div class="text">
+                        Undergraduate Capstone Project
+                    </div>
+
+                </div>
+                <a href="AlertTheCity.html"><img src="images/dracomaton.png" style="width:100%" class="image"></a>
                 <div class="tags">
                     <p class="tag1"> C# </p>
                     <p class="tag2"> Unity</p>
@@ -98,9 +180,9 @@
                     <p class="tag2"> Unity</p>
                     <p class="tag3"> 2D</p>
                 </div>
-            </div>
+            </div> -->
 
-            <!-- <div class="projects-col">
+<!-- <div class="projects-col">
                 <div class="project-description">
                     <div class="text">
 
@@ -114,7 +196,7 @@
                     <p class="tag3"> 2D</p>
                 </div>
             </div> -->
-            <div class="projects-col">
+<!-- <div class="projects-col">
                 <div class="project-description">
                     <div class="text">
                     </div>
@@ -126,12 +208,12 @@
                     <p class="tag2"> GoogleSheets</p>
                     <p class="tag3"> 2D</p>
                 </div>
-            </div>
-            <div class="projects-col">
+            </div> -->
+<!-- <div class="projects-col">
                 <div class="project-description">
                     <div class="text">
-                        <!-- <b>Hex Harmonia</b> is a 3D puzzle game which contains various kinds of puzzles. Resolve
-                        all the puzzles and escaping from this big hexagon room! -->
+                        <b>Hex Harmonia</b> is a 3D puzzle game which contains various kinds of puzzles. Resolve
+                        all the puzzles and escaping from this big hexagon room!
                     </div>
 
                 </div>
@@ -141,9 +223,9 @@
                     <p class="tag2"> Unity</p>
                     <p class="tag3"> 3D</p>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="projects-col">
+<!-- <div class="projects-col">
                 <div class="project-description">
                     <div class="text">
                         Game Jam Project
@@ -155,8 +237,8 @@
                     <p class="tag2"> Godot</p>
                     <p class="tag3"> 2D</p>
                 </div>
-            </div>
-            <!-- <div class="projects-col">
+            </div> -->
+<!-- <div class="projects-col">
 
                 <div class="project-description">
                     <div class="text">
@@ -173,7 +255,7 @@
                 </div>
             </div> -->
 
-            <!-- <div class="projects-col">
+<!-- <div class="projects-col">
                 <div class="project-description">
                     <div class="text">
                         <b>Turtles All the Way Down</b> is a 3D Endless Runner game.
@@ -189,7 +271,7 @@
             </div> -->
 
 
-            <!-- <div class="projects-col">
+<!-- <div class="projects-col">
                 <div class="project-description">
                     <div class="text">
                         <b>Where is my body</b> is a 2D Endless runner game that the character is a ghost trying to find
@@ -205,7 +287,7 @@
                 </div>
             </div> -->
 
-            <!-- <div class="projects-col">
+<!-- <div class="projects-col">
                 <div class="project-description">
                     <div class="text">
                         <b>DreamChaser</b> is a puzzle platformer in which a character would have to go through several
@@ -220,16 +302,30 @@
                 </div>
             </div> -->
 
-        </div>
+<!-- </div>
 
-        <h2>Individual Projects</h2>
+        <h2>Other Projects</h2>
         <div class="row">
             <div class="projects-col">
                 <div class="project-description">
-                    <!-- <div class="text">
+                    <div class="text">
+                    </div>
+
+                </div>
+                <a href="SpreadSheetGame.html"><img src="images/spreadsheet1.png" style="width:100%" class="image"></a>
+                <div class="tags">
+                    <p class="tag1"> JavaScript </p>
+                    <p class="tag2"> GoogleSheets</p>
+                    <p class="tag3"> 2D</p>
+                </div>
+            </div>
+
+            <div class="projects-col">
+                <div class="project-description">
+                    <div class="text">
                         <b>Ace Attorney Game Poster</b> is an Interactive Poster inspired by Ace Attorney series
                     </div> -->
-                </div>
+<!-- </div>
                 <a href="LevelEditor.html"><img src="images/Level Editor.png" style="width:100%" class="image"></a>
                 <div class="tags">
                     <p class="tag1">C++</p>
@@ -238,10 +334,10 @@
             </div>
             <div class="projects-col">
                 <div class="project-description">
-                    <!-- <div class="text">
+                     <div class="text">
                         <b>Ace Attorney Game Poster</b> is an Interactive Poster inspired by Ace Attorney series
                     </div> -->
-                </div>
+<!-- </div>
                 <a href="ParticleEffect.html"><img src="images/Particle Effect.gif" style="width:100%"
                         class="image"></a>
                 <div class="tags">
@@ -261,7 +357,7 @@
                     <p class="tag2"> Twine</p>
                     <p class="tag3"> 2D</p>
                 </div>
-            </div>
+            </div> -->
 <!-- 
             <div class="projects-col">
                 <div class="project-description">
@@ -277,7 +373,7 @@
                 </div>
             </div> -->
 
-            <!-- <div class="projects-col">
+<!-- <div class="projects-col">
                 <div class="project-description">
                     <div class="text">
                         <b>Killer Whale</b> is an interactive novels that telling a story about a girl who has been
@@ -291,8 +387,8 @@
                 </div> -->
 
 
-            </div>
-            <!-- <div class="projects-col">
+<!-- </div> -->
+<!-- <div class="projects-col">
                 <div class="project-description">
                     <div class="text">
                         <b>About Art</b> is an online resources app UI design prototype
@@ -300,7 +396,7 @@
                 </div>
                 <a href="works.html"><img src="images/Aboutart 1.png" style="width:100%" class="image"></a>
             </div> -->
-        </div>
+<!-- </div>
         <h2>UI/UX Projects</h2>
         <div class="row">
             <div class="projects-col">
@@ -318,6 +414,6 @@
     </section>
 
     <div id="footer"></div>
-</body>
+</body> -->
 
 </html>
