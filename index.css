@@ -49,6 +49,70 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Centered Content Section Styling */
+.centered-content {
+    text-align: center;
+    margin: 40px auto; /* Adds space between sections */
+    padding: 20px 0; /* Adds padding within each section */
+    max-width: 800px; /* Limits the width for better readability */
+}
+
+/* Title and Subtitle Styling */
+.centered-content h1 {
+    font-size: 2.5em;
+    color: #4570CA; /* Main accent color for titles */
+    margin-bottom: 10px;
+}
+
+.centered-content h3 {
+    font-size: 1.5em;
+    color: #555555; /* Soft gray for the subtitle */
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.centered-content .btn {
+    display: inline-block;
+    color: #ffffff;
+    background-color: #FF7070; /* Light red color for the button */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.centered-content .btn:hover {
+    background-color: #cc5c5c; /* Darker red on hover */
+}
+
+/* Link Styling */
+.centered-content a {
+    color: #4570CA; /* Blue color for links */
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.centered-content a:hover {
+    color: #355a8a; /* Darker shade on hover */
+}
+
+/* Paragraph Styling */
+.centered-content p {
+    color: #777777; /* Neutral gray for additional text */
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* Games Section Specific Styling */
+.games {
+    background-color: #f7f9fc; /* Light background color for contrast */
+    padding: 30px 0; /* Adds vertical padding */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
+    margin-top: 30px; /* Adds space above the section */
+}
 
 /* Project Tags */
 .tags {
