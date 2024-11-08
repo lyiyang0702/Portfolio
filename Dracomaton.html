@@ -34,6 +34,7 @@
         <div class="project-header">
             <h1 class="project-name">Dracomaton(2023)</h1>
             <p class="project-role">Gameplay Programmer & UI Programmer</p>
+            <a href="https://store.steampowered.com/app/2457890/DRACOMATON/" target="_blank" class="play-button">Play Now</a>
         </div>
         <!-- Media and Info Container for Flex Layout -->
         <div class="media-info-container">
@@ -45,10 +46,9 @@
                 </video>
                 <!-- Action Buttons: YouTube, Play Now, GitHub -->
                 <div class="media-buttons">
-                    <a href="https://www.youtube.com/watch?v=YourVideoID" target="_blank" class="youtube-button">Watch
-                        on YouTube</a>
-                    <a href="https://play-now-link.com" target="_blank" class="play-button">Play Now</a>
-                    <a href="https://github.com/YourGitHubRepo" target="_blank" class="github-button"> GitHub</a>
+                    <!-- <a href="https://www.youtube.com/watch?v=YourVideoID" target="_blank" class="youtube-button">Watch
+                        on YouTube</a> -->
+                    <a href="https://github.com/GunJumpers/GunJumpers" target="_blank" class="github-button"> GitHub</a>
                 </div>
             </div>
 
@@ -81,10 +81,13 @@
             <p>In Dracomaton, items add variety to the gameplay by giving players positive or negative effects that
                 impact their abilities and strategy.</p>
             <p>I set up the item system’s foundation, including how new items are created, how each item’s unique
-                effects work, and how these effects are applied to the player. Using Unity’s ScriptableObjects, I
+                effects work, and how these effects are applied to the player. Using Unity’s
+                <strong>ScriptableObjects</strong>, I
                 created a <code>BaseItem</code> class as the core for all items, establishing shared behaviors, such as
-                cooldown management, while allowing specific items to have custom logic. This setup uses inheritance and
-                polymorphism to make the item framework both scalable and adaptable.</p>
+                cooldown management, while allowing specific items to have custom logic. This setup uses
+                <strong>inheritance</strong> and
+                <strong>polymorphism</strong> to make the item framework both scalable and adaptable.
+            </p>
 
             <!-- Contribution Image with Interactive Effect -->
             <div class="contribution-image-container">
@@ -92,14 +95,11 @@
                 <p class="image-caption">Resource Management System for organizing in-game assets.</p>
             </div>
 
-            <p>To handle stat changes, I used a composition approach with <code>StatsModifier</code> collections that
+            <p>To handle stat changes, I used a <stong>composition</stong> approach with <code>StatsModifier</code>
+                collections that
                 manage each item's status and stats modifiers. These modifiers are dynamically applied or removed when
                 items are equipped, allowing for flexible adjustments to player stats like damage or health.</p>
-            <!-- Insert image related to Item System -->
-            <div class="contribution-image-container">
-                <img src="images/ItemCode.png" alt="Resource System Example" class="contribution-image" />
-                <p class="image-caption">Partial StatsModifier Code</p>
-            </div>
+
             <p>Since designers would be working with items too, I designed the system to be easy to adjust directly in
                 Unity’s Inspector. This setup lets designers test and fine-tune item strength just by changing values in
                 the Inspector, making it faster to balance items without needing to touch the code.</p>
@@ -112,28 +112,47 @@
             <!-- Resource System Contribution -->
             <h3>Resource System</h3>
             <p>In Dracomaton, random items and rewards appear in different scenarios, such as shops or as rewards after
-                clearing rooms. To manage these dynamic elements efficiently, I developed a Resource Management System
+                clearing rooms. To manage these dynamic elements efficiently, I developed a <strong>Resource Management
+                    System</strong>
                 as a central controller for all in-game assets, including UI icons, items, VFX, and more. This system
-                acts as a flexible helper function, simplifying resource organization and retrieval for both the Reward
-                System and the Shop System.</p>
+                acts as a flexible helper function, simplifying resource organization and retrieval for both the
+                <strong>Reward
+                    System</strong> and the <strong>Shop System</strong>.
+            </p>
             <p>The <code>ResourcesManager.cs</code> is a singleton class that loads various resources (like prefabs)
                 from project folders into organized lists when the game starts. To keep the codebase clear and
-                maintainable, I used a partial class structure that separates each resource type into its own manager.
+                maintainable, I used a <strong>partial class</strong> structure that separates each resource type into
+                its own manager.
                 This structure allows for easy access to specific resources through dedicated functions, making it
                 simple to spawn any item as needed. Additionally, each resource manager operates independently, so
                 programmers can create and manage single resource types without cluttering a primary script.</p>
-
+                <div class="contribution-image-container">
+                    <img src="images/rmscript.png" alt="Resource System Example" class="contribution-image" />
+                    <img src="images/ResourcesManager.png" alt="Resource System Example" class="contribution-image" />
+                </div>
             <!-- Reward System Contribution -->
             <h3>Reward System</h3>
             <p>In Dracomaton, players receive different rewards based on the type of room they complete. For example,
                 completing a health room grants a health potion. As the game progresses, various room types appear, each
                 offering unique rewards.</p>
-            <p>I created a Reward Spawner object that stores different reward prefabs, enabling dynamic and specific
-                item drops. When a room is cleared, the Reward Spawner selects the appropriate reward type and checks
-                for nearby available tiles to place the reward. This will help find the nearest available tile by only
-                checking necessary tiles.</p>
-            <p>I also used UnityEvents to make the reward system responsive and event-driven. This allows the reward
-                spawner to be triggered by room events without redundant referencing to keep a clean code structure.</p>
+            <p>I created a <strong>Reward Spawner</strong> object that stores different reward prefabs, enabling dynamic
+                and specific
+                item drops.</p>
+            <p> When a room is cleared, the Reward Spawner selects the appropriate reward type and checks
+                for nearby available tiles to place the reward. Since tile maps are grid-based, I searched the tiles in
+                a <strong>Spiral Pattern</strong> outward from the player within a specific range. This will help find
+                the nearest
+                available tile by only checking necessary tiles.</p>
+                <div class="contribution-image-container">
+                    <img src="images/rewardSpawners.png" alt="Resource System Example" class="contribution-image" />
+                    <img src="images/SpiralPattern.png" alt="Resource System Example" class="contribution-image" />
+                    <img src="images/dc10.gif" alt="Resource System Example" class="contribution-image" />
+                </div>
+            <p>I implemented a responsive and event-driven reward system using <strong>UnityEvents</strong> and
+                <strong>delegates</strong>. This
+                approach enables the reward spawner to be triggered directly by room events, reducing redundant
+                references and keeping the code structure clean and modular.
+            </p>
 
             <!-- Shop System Subtitle -->
             <h4>Shop System</h4>
@@ -142,7 +161,10 @@
                 can be easily placed anywhere in the scene. I also made a dynamic system that allows each shop item
                 position to spawn either randomized or fixed items. The shop system also uses weighted randomization for
                 shop item generation, making rarer items less likely to appear.</p>
-
+                <div class="contribution-image-container">
+                    <img src="images/ShopItemController.png" alt="Resource System Example" class="contribution-image" />
+                    <img src="images/dc9.gif" alt="Resource System Example" class="contribution-image" />
+                </div>
             <!-- Mod Menu Subtitle -->
             <h4>Mod Menu</h4>
             <p>In Dracomaton, the Mod Menu is a key part of the game’s UI, built to handle two slot types: Form Slots
@@ -152,6 +174,10 @@
                 IBeginDragHandler, and IDragHandler) Interface with a custom Draggable Item class. I structured the
                 slots into Form Slot and Mod Slots to simplify tracking and syncing the UI with the player's actual
                 equipment status. If an item can’t be equipped, the system displays visual cues to guide the player.</p>
+                <div class="contribution-image-container">
+                    <img src="images/dc6.gif" alt="Resource System Example" class="contribution-image" />
+                    <img src="images/dc7.gif" alt="Resource System Example" class="contribution-image" />
+                </div>
         </div>
     </section>
 
@@ -250,10 +276,10 @@
 
 
                     </div> -->
-    </div>
+    <!-- </div>
     </div>
 
-    </div>
+    </div> -->
 
 
 
@@ -265,8 +291,8 @@
                 Slides</a></p>
     </div> -->
 
-    </section>
-
+    <!-- </section> -->
+<!-- 
     <script>
         function hideBlock(id) {
             var x = document.getElementById(id);
@@ -277,6 +303,8 @@
             }
         }
     </script>
+
+    <footer id="footer"></footer> -->
 
     <footer id="footer"></footer>
 </body>

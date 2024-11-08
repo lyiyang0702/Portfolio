@@ -3,189 +3,187 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="project.css">
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dracomaton</title>
+    <script src="utils.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project.css">
+
+    <link rel="icon" href="image/website-icon.png" type="image/x-icon">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400&family=Montserrat:ital,wght@0,300;1,300&family=Silkscreen:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>My Works</title>
-    <link rel="icon" type="image/x-icon" href="website-icon.png">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous">
-        </script>
-    <script>
-        $(function () {
-            $('#header').load("header.html");
-            $('#footer').load("footer.html");
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div id="header"></div>
+    <header id="header"></header>
+    <section class="project-card">
 
+        <!-- Project Header Section -->
+        <div class="project-header">
+            <h1 class="project-name"> Alert The City (2024)</h1>
+            <p class="project-role"> Gameplay & UI Programmer</p>
+            <a href="https://ucsc-wildfire-games.itch.io/alert-the-city" target="_blank" class="play-button">Play
+                Now</a>
+        </div>
+        <!-- Media and Info Container for Flex Layout -->
+        <div class="media-info-container">
+            <!-- Main Media Section (Video) -->
+            <div class="project-media">
+                <video autoplay loop controls class="media-video">
+                    <source src="video/AlertTheCity.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Action Buttons: YouTube, Play Now, GitHub -->
+                <div class="media-buttons">
+                    <!-- <a href="https://www.youtube.com/watch?v=YourVideoID" target="_blank" class="youtube-button">Watch
+                        on YouTube</a> -->
+                    <a href="https://github.com/mjohns2355/WildfireGames" target="_blank" class="github-button">
+                        GitHub</a>
+                </div>
+            </div>
 
-    <section class="projects">
+            <!-- About and Project Overview Grouped -->
+            <div class="project-info">
+                <!-- About Section -->
+                <div class="project-description">
+                    <h2>About</h2>
+                    <p>Alert the City is a 3D top-down traffic simulation and educational game that teaches players
+                        about wildfire evacuation strategies. Players act as community leaders making critical decisions
+                        during a wildfire evacuation to avoid loss and ensure safety. Each choice directly impacts the
+                        evacuation’s final outcome, offering valuable lessons on emergency preparedness and response.
+                        With interactive scenarios and realistic challenges, this game provides a hands-on way to
+                        understand wildfire evacuation planning and safety.</p>
+                </div>
 
-        <div class="project-title">
-            <h1 id="project-title"> Alert The City (2024)</h1>
-            <div class="interactive">
-                <a href="https://teitoku-lowliet.itch.io/deck-fective" target="_blank" rel="noopener noreferrer"
-                    class="btn_2">
-                    Play Now</a>
-                <i class="fa fa-github" id="icon"
-                    onclick="location.href = 'https://github.com/lyiyang0702/Card-Collection-Game'" target="_blank"
-                    rel="noopener noreferrer" style="cursor:pointer" title="source code"></i>
+                <!-- Project Overview Section -->
+                <div class="project-overview">
+                    <h2>Project Overview</h2>
+                    <p><strong>Role:</strong> Gameplay & UI Programmer</p>
+                    <p><strong>Team size:</strong> 2 </p>
+                    <p><strong>Engine:</strong> Unity</p>
+                </div>
             </div>
         </div>
+        <hr class="section-divider">
+        <!-- Contributions Section -->
+        <div class="project-contributions">
+            <h2>Contributions</h2>
 
-        <!-- description -->
+            <!-- Item System Contribution -->
+            <h3>Item System</h3>
+            <p>In Dracomaton, items add variety to the gameplay by giving players positive or negative effects that
+                impact their abilities and strategy.</p>
+            <p>I set up the item system’s foundation, including how new items are created, how each item’s unique
+                effects work, and how these effects are applied to the player. Using Unity’s
+                <strong>ScriptableObjects</strong>, I
+                created a <code>BaseItem</code> class as the core for all items, establishing shared behaviors, such as
+                cooldown management, while allowing specific items to have custom logic. This setup uses
+                <strong>inheritance</strong> and
+                <strong>polymorphism</strong> to make the item framework both scalable and adaptable.
+            </p>
 
-        <div class="title">
-            <div class="cover">
-                <video autoplay loop controls>
-                    <source src="video/AlertTheCity.mp4" type="video/mp4">
-                </video>
-
-                <!-- <a href="https://www.youtube.com/@gunjumpers" target="_blank" rel="noopener noreferrer" class="btn_2">
-                    More</a> -->
-                <div class="pics">
-                    <img src="images/ccg (1).gif">
-                    <img src="images/ccg (2).gif">
-                    <img src="images/ccg (3).gif">
-                    <img src="images/ccg (4).gif">
-                </div>
+            <!-- Contribution Image with Interactive Effect -->
+            <div class="contribution-image-container">
+                <img src="images/ItemOverview.png" alt="Resource System Example" class="contribution-image" />
+                <p class="image-caption">Resource Management System for organizing in-game assets.</p>
             </div>
-            <div class="game-info">
-                <div class="description">
 
-                    <strong>Alert the city</strong> is a a 3D top-down <strong>traffic simulation</strong> and
-                    <strong>educational
-                        game</strong> that teaches players about
-                    wildfire evacuation strategies. Player act as a community leader to make critical decisions during a
-                    wildfire
-                    evacuation to <strong>avoid loss and ensure safety</strong>. Each choice directly
-                    impacts the final results of evacuation, offering valuable lessons on emergency
-                    preparedness and
-                    response. With interactive scenarios and realistic challenges, this game provides a hands-on way to
-                    understand
-                    wildfire evacuation planning and safety.
+            <p>To handle stat changes, I used a <stong>composition</stong> approach with <code>StatsModifier</code>
+                collections that
+                manage each item's status and stats modifiers. These modifiers are dynamically applied or removed when
+                items are equipped, allowing for flexible adjustments to player stats like damage or health.</p>
 
+            <p>Since designers would be working with items too, I designed the system to be easy to adjust directly in
+                Unity’s Inspector. This setup lets designers test and fine-tune item strength just by changing values in
+                the Inspector, making it faster to balance items without needing to touch the code.</p>
+            <div class="contribution-image-container">
+                <img src="images/ItemInspector.png" alt="Resource System Example" class="contribution-image" />
+            </div>
+            <!-- <div class="contribution-image">
+                <img src="images/ItemInspector.png" alt="Item System Example" />
+            </div> -->
+            <!-- Resource System Contribution -->
+            <h3>Resource System</h3>
+            <p>In Dracomaton, random items and rewards appear in different scenarios, such as shops or as rewards after
+                clearing rooms. To manage these dynamic elements efficiently, I developed a <strong>Resource Management
+                    System</strong>
+                as a central controller for all in-game assets, including UI icons, items, VFX, and more. This system
+                acts as a flexible helper function, simplifying resource organization and retrieval for both the
+                <strong>Reward
+                    System</strong> and the <strong>Shop System</strong>.
+            </p>
+            <p>The <code>ResourcesManager.cs</code> is a singleton class that loads various resources (like prefabs)
+                from project folders into organized lists when the game starts. To keep the codebase clear and
+                maintainable, I used a <strong>partial class</strong> structure that separates each resource type into
+                its own manager.
+                This structure allows for easy access to specific resources through dedicated functions, making it
+                simple to spawn any item as needed. Additionally, each resource manager operates independently, so
+                programmers can create and manage single resource types without cluttering a primary script.</p>
+            <div class="contribution-image-container">
+                <img src="images/rmscript.png" alt="Resource System Example" class="contribution-image" />
+                <img src="images/ResourcesManager.png" alt="Resource System Example" class="contribution-image" />
+            </div>
+            <!-- Reward System Contribution -->
+            <h3>Reward System</h3>
+            <p>In Dracomaton, players receive different rewards based on the type of room they complete. For example,
+                completing a health room grants a health potion. As the game progresses, various room types appear, each
+                offering unique rewards.</p>
+            <p>I created a <strong>Reward Spawner</strong> object that stores different reward prefabs, enabling dynamic
+                and specific
+                item drops.</p>
+            <p> When a room is cleared, the Reward Spawner selects the appropriate reward type and checks
+                for nearby available tiles to place the reward. Since tile maps are grid-based, I searched the tiles in
+                a <strong>Spiral Pattern</strong> outward from the player within a specific range. This will help find
+                the nearest
+                available tile by only checking necessary tiles.</p>
+            <div class="contribution-image-container">
+                <img src="images/rewardSpawners.png" alt="Resource System Example" class="contribution-image" />
+                <img src="images/SpiralPattern.png" alt="Resource System Example" class="contribution-image" />
+                <img src="images/dc10.gif" alt="Resource System Example" class="contribution-image" />
+            </div>
+            <p>I implemented a responsive and event-driven reward system using <strong>UnityEvents</strong> and
+                <strong>delegates</strong>. This
+                approach enables the reward spawner to be triggered directly by room events, reducing redundant
+                references and keeping the code structure clean and modular.
+            </p>
 
-
-                </div>
-                <div class="contribution">
-                    <h1 id="project-title">What part did I do? </h1>
-                    <h2>Traffic Simulation & AI System<i class="fa fa-caret-down" onclick="hideBlock('reward')"
-                            style="cursor:pointer"></i></h2>
-                    <div id="reward" style="display: none;">
-                        <ul>
-                            <li><strong>Dynamic Pathfinding:</strong> Utilized <code>A*</code> and
-                                <code>K-shortest path algorithms</code> for adaptable vehicle navigation, enabling cars
-                                to reroute based on traffic congestion and road conditions. A <code>CarAI</code> and
-                                <code>CarController</code> manage speed, collision avoidance, and honking responses.
-                            </li>
-                            <li><strong>Adaptive Road Management:</strong> Designed <code>ATC_RoadManager</code> and
-                                <code>RoadFixer</code> to configure road types (e.g., intersections, dead-ends)
-                                automatically, optimizing traffic flow. The <code>RoadHelper</code> component ensures
-                                accurate vehicle placement and smooth path transitions.</li>
-                            <li><strong>Car Spawning Variability:</strong> Created <code>ATC_CarSpawner</code> to
-                                introduce randomness in spawn timing and vehicle types, generating organic traffic
-                                patterns and diverse AI behaviors.</li>
-                        </ul>
-                    </div>
-
-                    <h2>Player Movement and Interaction:<i class="fa fa-caret-down" onclick="hideBlock('player')"
-                            style="cursor:pointer"></i></h2>
-                    <div id="player" style="display: none;">
-                        <ul>
-                            <li><strong>Finite State Machine for Interactions:</strong> Used a <strong>Finite State
-                                    Machine
-                                    (FSM)</strong> for managing the state of interactable objects, ensuring player
-                                interactions are only possible under the correct conditions.</li>
-                            <li><strong>Input Management:</strong> Integrated Unity's <strong>Input System</strong> for
-                                seamless player control, handling both free-walking and grid-based movements within the
-                                same
-                                game system.</li>
-                            <li><strong>Raycasting for Environmental Interactions:</strong> Applied <strong>2D
-                                    Raycasting</strong> in the PlayerController for detecting interactable objects,
-                                optimizing performance while providing real-time interaction feedback.</li>
-                        </ul>
-                    </div>
-
-                    <h2>Enemy AI and Combat Mechanics:<i class="fa fa-caret-down" onclick="hideBlock('enemy')"
-                            style="cursor:pointer"></i></h2>
-                    <div id="enemy" style="display: none;">
-                        <ul>
-                            <li><strong>Shared Combat Logic (Inheritance):</strong> Utilized inheritance and
-                                polymorphism by
-                                extending a <strong>Damageable</strong> class for both player and enemies, allowing for
-                                shared functionality while enabling customization of unique behaviors like
-                                enemy-specific
-                                rewards.</li>
-                            <li><strong>Dynamic Enemy Attack Patterns:</strong> Managed enemy attack behavior with
-                                <strong>coroutines</strong>, introducing dynamic timing between actions and adapting
-                                attack
-                                routines based on game progression.
-                            </li>
-                            <li><strong>Difficulty Scaling:</strong> Adjusted enemy stats dynamically based on
-                                difficulty
-                                (Easy, Mid, Hard, Boss) using scaling logic to maintain challenge across the different
-                                areas
-                                of the game.</li>
-                        </ul>
-                    </div>
-                    <h2>UI and Visual Effects:<i class="fa fa-caret-down" onclick="hideBlock('ui')"
-                            style="cursor:pointer"></i></h2>
-                    <div id="ui" style="display: none;">
-                        <ul>
-                            <li><strong>Prefab-Based UI Design:</strong> Built a dynamic UI for cards and inventory
-                                using a
-                                <strong>prefab-based approach</strong>, enabling real-time instantiation and updates for
-                                card elements (CardUI.cs) during gameplay.
-                            </li>
-                            <li><strong>Event-Driven UI Updates:</strong> Employed event-driven programming to update
-                                the UI
-                                based on player and enemy status, ensuring real-time feedback for health, combat state,
-                                and
-                                inventory updates.</li>
-                            <li><strong>State-Driven UI Management:</strong> Implemented a state-driven UI, which
-                                dynamically adjusts based on the battle phases (e.g., disabling the card selection
-                                interface
-                                during EnemyTurn).</li>
-                        </ul>
-                    </div>
-                    <h2>Game and Level Management:<i class="fa fa-caret-down" onclick="hideBlock('level')"
-                            style="cursor:pointer"></i></h2>
-                    <div id="level" style="display: none;">
-                        <ul>
-                            <li><strong>Singleton Pattern for Managers:</strong> Utilized the <strong>Singleton
-                                    pattern</strong> for various management systems (e.g., GameManager,
-                                ResourceManager), ensuring global access and consistency throughout the game.</li>
-                            <li><strong>Dynamic Scene Loading:</strong> Managed scene transitions using Unity's
-                                <strong>SceneManager</strong>, allowing for smooth movement between different game areas
-                                while maintaining the player's state and progress.
-                            </li>
-                        </ul>
-                    </div>
-                    <h2>Resource Management:<i class="fa fa-caret-down" onclick="hideBlock('resource')"
-                            style="cursor:pointer"></i></h2>
-                    <div id="resource" style="display: none;">
-                        <ul>
-                            <li><strong>Weighted Randomization for Card Drops:</strong> Applied <strong>weighted random
-                                    algorithms</strong> to manage card drop rates, ensuring rare cards have a lower
-                                probability of appearing, balancing progression.</li>
-                            <li><strong>Data-Driven Card Management:</strong> Used <strong>ScriptableObjects</strong>
-                                for a modular, data-driven approach to manage card information, allowing for easy
-                                expansion and modification of the card pool.</li>
-                        </ul>
-                    </div>
-                    <!-- <li> UI <i class="fa fa-caret-down" onclick="hideBlock('multi')" style="cursor:pointer"></i> </li>
+            <!-- Shop System Subtitle -->
+            <h4>Shop System</h4>
+            <p>For the Shop System, I was responsible for setting up three items in each shop room, providing players
+                with varied options every time they entered. To achieve this, I created a Shop Item Position Prefab that
+                can be easily placed anywhere in the scene. I also made a dynamic system that allows each shop item
+                position to spawn either randomized or fixed items. The shop system also uses weighted randomization for
+                shop item generation, making rarer items less likely to appear.</p>
+            <div class="contribution-image-container">
+                <img src="images/ShopItemController.png" alt="Resource System Example" class="contribution-image" />
+                <img src="images/dc9.gif" alt="Resource System Example" class="contribution-image" />
+            </div>
+            <!-- Mod Menu Subtitle -->
+            <h4>Mod Menu</h4>
+            <p>In Dracomaton, the Mod Menu is a key part of the game’s UI, built to handle two slot types: Form Slots
+                (upper) and Mod Slots (lower). The menu allows players to customize their setup by dragging and swapping
+                forms and mods between these slots.</p>
+            <p>To make sure the UI changes reflected in the gameplay, I used Unity’s Drag and Drop (IDropHandler,
+                IBeginDragHandler, and IDragHandler) Interface with a custom Draggable Item class. I structured the
+                slots into Form Slot and Mod Slots to simplify tracking and syncing the UI with the player's actual
+                equipment status. If an item can’t be equipped, the system displays visual cues to guide the player.</p>
+            <div class="contribution-image-container">
+                <img src="images/dc6.gif" alt="Resource System Example" class="contribution-image" />
+                <img src="images/dc7.gif" alt="Resource System Example" class="contribution-image" />
+            </div>
+        </div>
+    </section>
+    <!-- <li> UI <i class="fa fa-caret-down" onclick="hideBlock('multi')" style="cursor:pointer"></i> </li>
                     <div id="multi" style="display: none;">
                         In a PVP arena game, local multiplayer is very important as part of the core gameplay.
                         Therefore, I have used Unity's <b>new input system</b> to facilitate gameplay for up to four
@@ -210,22 +208,22 @@
                         <br>
                         <img src="images/eventSystem.png"><br>
                     </div> -->
-                </div>
+    <!-- </div>
             </div>
 
-        </div>
+        </div> -->
 
 
 
 
-        <!-- <div>
+    <!-- <div>
         <h2>Design Details</h2>
         <p><a
                 href="https://docs.google.com/presentation/d/1MdtTKm_kEejC5-dENBHoSK-WHHb_aEeLbEA8JtSirbc/edit?usp=sharing">Design
                 Slides</a></p>
     </div> -->
 
-    </section>
+    <!-- </section>
 
     <script>
         function hideBlock(id) {
@@ -238,7 +236,8 @@
         }
     </script>
 
-    <div id="footer"></div>
+    <div id="footer"></div> -->
+    <footer id="footer"></footer>
 </body>
 
 </html>
