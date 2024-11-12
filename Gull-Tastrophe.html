@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dracomaton</title>
+    <script src="utils.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project.css">
+
+    <link rel="icon" href="image/website-icon.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400&family=Montserrat:ital,wght@0,300;1,300&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header"></header>
+
+
+    <section class="project-card">
+
+        <!-- Project Header Section -->
+        <div class="project-header">
+            <h1 class="project-name">Gull-Tastrophe</h1>
+            <p class="project-role">Gameplay Programmer & Game Designer</p>
+            <a class="play-button">Playable Demo will be released in this winter</a>
+        </div>
+        <!-- Media and Info Container for Flex Layout -->
+        <div class="media-info-container">
+            <!-- Main Media Section (Video) -->
+            <div class="project-media">
+                <video autoplay loop controls class="media-video">
+                    <source src="video/dracomaton.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Action Buttons: YouTube, Play Now, GitHub -->
+                <div class="media-buttons">
+                    <!-- <a href="https://www.youtube.com/watch?v=YourVideoID" target="_blank" class="youtube-button">Watch
+                        on YouTube</a> -->
+                    <a href="https://github.com/GunJumpers/GunJumpers" target="_blank" class="github-button"> GitHub</a>
+                </div>
+            </div>
+
+            <!-- About and Project Overview Grouped -->
+            <div class="project-info">
+                <!-- About Section -->
+                <div class="project-description">
+                    <h2>About</h2>
+                    <p>Dracomaton is a top-down roguelike bullet hell where you swap between multiple playstyles on the
+                        fly. Equip yourself with various Forms that have different strengths and weaknesses, or Mod
+                        existing Forms with the characteristics of other ones!</p>
+                </div>
+
+                <!-- Project Overview Section -->
+                <div class="project-overview">
+                    <h2>Project Overview</h2>
+                    <p><strong>Role:</strong> Gameplay Programmer & UI Programmer</p>
+                    <p><strong>Team size:</strong> 13</p>
+                    <p><strong>Engine:</strong> Unity</p>
+                </div>
+            </div>
+        </div>
+        <hr class="section-divider">
+        <!-- Contributions Section -->
+        <div class="project-contributions">
+            <h2>Contributions</h2>
+
+            <!-- Item System Contribution -->
+            <h3>Item System</h3>
+            <p>In Dracomaton, items add variety to the gameplay by giving players positive or negative effects that
+                impact their abilities and strategy.</p>
+            <p>I set up the item system’s foundation, including how new items are created, how each item’s unique
+                effects work, and how these effects are applied to the player. Using Unity’s
+                <strong>ScriptableObjects</strong>, I
+                created a <code>BaseItem</code> class as the core for all items, establishing shared behaviors, such as
+                cooldown management, while allowing specific items to have custom logic. This setup uses
+                <strong>inheritance</strong> and
+                <strong>polymorphism</strong> to make the item framework both scalable and adaptable.
+            </p>
+
+            <!-- Contribution Image with Interactive Effect -->
+            <div class="contribution-image-container">
+                <img src="images/ItemOverview.png" alt="Resource System Example" class="contribution-image" />
+                <p class="image-caption">Resource Management System for organizing in-game assets.</p>
+            </div>
+
+            <p>To handle stat changes, I used a <stong>composition</stong> approach with <code>StatsModifier</code>
+                collections that
+                manage each item's status and stats modifiers. These modifiers are dynamically applied or removed when
+                items are equipped, allowing for flexible adjustments to player stats like damage or health.</p>
+
+            <p>Since designers would be working with items too, I designed the system to be easy to adjust directly in
+                Unity’s Inspector. This setup lets designers test and fine-tune item strength just by changing values in
+                the Inspector, making it faster to balance items without needing to touch the code.</p>
+            <div class="contribution-image-container">
+                <img src="images/ItemInspector.png" alt="Resource System Example" class="contribution-image" />
+            </div>
+            <!-- <div class="contribution-image">
+                <img src="images/ItemInspector.png" alt="Item System Example" />
+            </div> -->
+            <!-- Resource System Contribution -->
+            <h3>Resource System</h3>
+            <p>In Dracomaton, random items and rewards appear in different scenarios, such as shops or as rewards after
+                clearing rooms. To manage these dynamic elements efficiently, I developed a <strong>Resource Management
+                    System</strong>
+                as a central controller for all in-game assets, including UI icons, items, VFX, and more. This system
+                acts as a flexible helper function, simplifying resource organization and retrieval for both the
+                <strong>Reward
+                    System</strong> and the <strong>Shop System</strong>.
+            </p>
+            <p>The <code>ResourcesManager.cs</code> is a singleton class that loads various resources (like prefabs)
+                from project folders into organized lists when the game starts. To keep the codebase clear and
+                maintainable, I used a <strong>partial class</strong> structure that separates each resource type into
+                its own manager.
+                This structure allows for easy access to specific resources through dedicated functions, making it
+                simple to spawn any item as needed. Additionally, each resource manager operates independently, so
+                programmers can create and manage single resource types without cluttering a primary script.</p>
+                <div class="contribution-image-container">
+                    <img src="images/rmscript.png" alt="Resource System Example" class="contribution-image" />
+                    <img src="images/ResourcesManager.png" alt="Resource System Example" class="contribution-image" />
+                </div>
+            <!-- Reward System Contribution -->
+            <h3>Reward System</h3>
+            <p>In Dracomaton, players receive different rewards based on the type of room they complete. For example,
+                completing a health room grants a health potion. As the game progresses, various room types appear, each
+                offering unique rewards.</p>
+            <p>I created a <strong>Reward Spawner</strong> object that stores different reward prefabs, enabling dynamic
+                and specific
+                item drops.</p>
+            <p> When a room is cleared, the Reward Spawner selects the appropriate reward type and checks
+                for nearby available tiles to place the reward. Since tile maps are grid-based, I searched the tiles in
+                a <strong>Spiral Pattern</strong> outward from the player within a specific range. This will help find
+                the nearest
+                available tile by only checking necessary tiles.</p>
+                <div class="contribution-image-container">
+                    <img src="images/rewardSpawners.png" alt="Resource System Example" class="contribution-image" />
+                    <img src="images/SpiralPattern.png" alt="Resource System Example" class="contribution-image" />
+                    <img src="images/dc10.gif" alt="Resource System Example" class="contribution-image" />
+                </div>
+            <p>I implemented a responsive and event-driven reward system using <strong>UnityEvents</strong> and
+                <strong>delegates</strong>. This
+                approach enables the reward spawner to be triggered directly by room events, reducing redundant
+                references and keeping the code structure clean and modular.
+            </p>
+
+            <!-- Shop System Subtitle -->
+            <h4>Shop System</h4>
+            <p>For the Shop System, I was responsible for setting up three items in each shop room, providing players
+                with varied options every time they entered. To achieve this, I created a Shop Item Position Prefab that
+                can be easily placed anywhere in the scene. I also made a dynamic system that allows each shop item
+                position to spawn either randomized or fixed items. The shop system also uses weighted randomization for
+                shop item generation, making rarer items less likely to appear.</p>
+                <div class="contribution-image-container">
+                    <img src="images/ShopItemController.png" alt="Resource System Example" class="contribution-image" />
+                    <img src="images/dc9.gif" alt="Resource System Example" class="contribution-image" />
+                </div>
+            <!-- Mod Menu Subtitle -->
+            <h4>Mod Menu</h4>
+            <p>In Dracomaton, the Mod Menu is a key part of the game’s UI, built to handle two slot types: Form Slots
+                (upper) and Mod Slots (lower). The menu allows players to customize their setup by dragging and swapping
+                forms and mods between these slots.</p>
+            <p>To make sure the UI changes reflected in the gameplay, I used Unity’s Drag and Drop (IDropHandler,
+                IBeginDragHandler, and IDragHandler) Interface with a custom Draggable Item class. I structured the
+                slots into Form Slot and Mod Slots to simplify tracking and syncing the UI with the player's actual
+                equipment status. If an item can’t be equipped, the system displays visual cues to guide the player.</p>
+                <div class="contribution-image-container">
+                    <img src="images/dc6.gif" alt="Resource System Example" class="contribution-image" />
+                    <img src="images/dc7.gif" alt="Resource System Example" class="contribution-image" />
+                </div>
+        </div>
+    </section>

@@ -154,7 +154,7 @@ body {
 
 .project-contributions h4 {
     font-size: 1.4em;
-    color: #555555;
+    color:brown;
     margin-top: 20px;
     margin-bottom: 10px;
 }
@@ -177,7 +177,7 @@ body {
 /* Contribution Image */
 .contribution-image {
     width: 100%;
-    max-width: 300px; /* Limit maximum width for consistency */
+    max-width: 500px; /* Limit maximum width for consistency */
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
