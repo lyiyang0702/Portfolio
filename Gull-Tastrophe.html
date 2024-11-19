@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gull-Tastrophe</title>
+    <script src="utils.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project.css">
+
+    <link rel="icon" href="image/website-icon.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400&family=Montserrat:ital,wght@0,300;1,300&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header"></header>
+
+
+    <section class="project-card">
+
+        <!-- Project Header Section -->
+        <div class="project-header">
+            <h1 class="project-name">Gull-Tastrophe</h1>
+            <p class="project-role">Gameplay Programmer & Game Designer</p>
+            <a class="play-button">Playable Demo will be released in this winter</a>
+        </div>
+        <!-- Media and Info Container for Flex Layout -->
+        <div class="media-info-container">
+            <!-- Main Media Section (Video) -->
+            <div class="project-media">
+                <video autoplay loop controls class="media-video">
+                    <source src="video/" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Action Buttons: YouTube, Play Now, GitHub -->
+                <!-- <div class="media-buttons">
+                    <a href="https://www.youtube.com/watch?v=YourVideoID" target="_blank" class="youtube-button">Watch
+                        on YouTube</a>
+                    <a href="https://github.com/GunJumpers/GunJumpers" target="_blank" class="github-button"> GitHub</a>
+                </div> -->
+            </div>
+
+            <!-- About and Project Overview Grouped -->
+            <div class="project-info">
+                <!-- About Section -->
+                <div class="project-description">
+                    <h2>About</h2>
+                    <p>Gull-Tastrophe is a 3D funny action-adventure game that lets players act as a seagull to poop and
+                        create chaos everywhere. Enjoy life being a seagull and do whatever you want. The goal is to
+                        beat the human out of your home island!
+                    </p>
+                </div>
+
+                <!-- Project Overview Section -->
+                <div class="project-overview">
+                    <h2>Project Overview</h2>
+                    <p><strong>Role:</strong> Gameplay Programmer & Game Designer</p>
+                    <p><strong>Team size:</strong> 6</p>
+                    <p><strong>Engine:</strong> Unreal 5</p>
+                    <p>I pitched this game and was green-lit by the program advisor. I was responsible for
+                        system/gameplay programming and game design.</p>
+                </div>
+            </div>
+        </div>
+        <hr class="section-divider">
+        <!-- Contributions Section -->
+        <div class="project-contributions">
+            <h2>Contributions</h2>
+
+            <!-- Item System Contribution -->
+            <h3>Game Progression</h3>
+            <p>In Gull-Tastrophe, I was responsible for designing and implementing the Warning Level System and the
+                Event System, both of which are essential to the game's progression mechanics. The warning level
+                dynamically adjusts game difficulty, while the event system increases the warning level.</p>
+            <h4>Warning Level System</h4>
+            <p>The Warning Level System is key to game progression, as it dynamically changes the game’s difficulty by
+                spawning more enemies, changing enemies' behavior, etc. To ensure flexibility and scalability, I
+                designed the system to be highly modular and abstract, enabling it to integrate with other game systems.
+            </p>
+            <p>The system uses Event dispatchers to hook into related systems; for example, when the warning level
+                increases, the Building System spawns more NPCs, and the UI System displays a banner. The warning level
+                can be triggered by various in-game events, allowing it to affect multiple gameplay systems without
+                redundant referencing.</p>
+            <!-- Contribution Image with Interactive Effect -->
+            <div class="contribution-image-container">
+                <img src="images/WarningLevel.gif" alt="Warning Level Example" class="contribution-image" />
+                <img src="images/LevelManager.png" alt="Warning Level Example" class="contribution-image" />
+            </div>
+            <h3>Event System</h3>
+            <p>Handling different in-game events was tough, so I needed to build a solid and flexible system. My
+                solution is to use a Data Table structure to store all the in-game events and an Event Manager to handle
+                registration and processing efficiently. Events are categorized into three types: Normal Events, where
+                scores are added directly to the warning level; Count Events, where scores accumulate only after the
+                event has occurred a certain number of times; and Combo Events, where scores are stored temporarily and
+                added when triggered by specific conditions</p>
+            <div class="contribution-image-container">
+                <img src="images/NormalEvent.gif" alt="Event System Example" class="contribution-image" />
+                <img src="images/CountEvent.gif" alt="Event System Example" class="contribution-image" />
+            </div>
+            <p>The centralized Event Manager registers events from various Blueprints and determines their type based on
+                the Event Struct, using this categorization to decide how and when to add scores, making the process
+                simpler of introducing new events or modifying existing ones. This approach minimizes conditional checks
+                and avoids major modifications to the system when scaling or adding features.
+            </p>
+            <div class="contribution-image-container">
+                <img src="images/DataTable.png" alt="Event System Example" class="contribution-image" />
+                <img src="images/EventManager.png" alt="Event System Example" class="contribution-image" />
+            </div>
+            <!-- <div class="contribution-image">
+                <img src="images/ItemInspector.png" alt="Item System Example" />
+            </div> -->
+            <!-- Resource System Contribution -->
+            <h3>Destructible System</h3>
+            <p>In Gull-Tastrophe, there are two types of destructible that players can destroy by either dashing or
+                pooping. Each destructible has a specific amount of health and spawns rewards upon being destroyed.
+            </p>
+            <h4>Base Destructible Class</h4>
+            <p>TTo handle the shared logic for destructibles, I created a Base Destructible Class that all destructible
+                types inherit from. This class manages common functionality such as triggering explosion effects and
+                spawning rewards. I set up a Box Collider inside the base destructible Blueprint to handle damage
+                detection and combined Physics Fields with Geometry Collections to create visual explosion effects.
+            </p>
+            <!-- <div class="contribution-image-container">
+                <img src="images/rmscript.png" alt="Resource System Example" class="contribution-image" />
+                <img src="images/ResourcesManager.png" alt="Resource System Example" class="contribution-image" />
+            </div> -->
+            <h4>Individual Destructible Types</h4>
+            <!-- Reward System Contribution -->
+            <p>Each destructible type extends the base class and adds unique behavior. For example: Destructible Police
+                Station, Destructible Jar, Destructible Car. Using inheritance allows for easy adjustments and
+                modifications of individual destructibles while keeping the shared logic centralized.
+            </p>
+            <div class="contribution-image-container">
+                <img src="images/PoliceStation.gif" alt="Resource System Example" class="contribution-image" />
+                <img src="images/Small.gif" alt="Resource System Example" class="contribution-image" />
+            </div>
+            <h4>Building System and Falling Logic</h4>
+            <p>
+                In the game, destructibles can be stacked on top of each other. Destroying one causes the ones above it
+                to fall and shift down. To optimize performance, I implemented a "faked" physics system for this effect,
+                using animations and mathematical calculations instead of real-time physics simulations.
+                The Falling Logic is
+                1. When a block is destroyed, it checks for an upper neighbor.
+                2. If an upper neighbor exists, it recursively calls the Fall Event, setting the current block's
+                position
+                as the target location for the neighbor to fall to.
+                3.This process continues until no neighbors are found.
+
+            </p>
+            <div class="contribution-image-container">
+                <img src="images/BuildingFalling.png" alt="Resource System Example" class="contribution-image" />
+                <img src="images/BuildingFalling.gif" alt="Resource System Example" class="contribution-image" />
+            </div>
+            <p>This approach provides greater control over the falling style and distance while being much cheaper in
+                terms of performance compared to real-time physics simulations.
+            </p>
+        </div>
+    </section>
+    <footer id="footer"></footer>
+</body>
+
+</html>

@@ -1,208 +1,200 @@
+/* Container for Projects */
 .container {
-    /* padding: 1%; */
-    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.text-box {
-    width: 90%;
-    position: relative;
-    margin-top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-
-}
-
-/* .text-box h1 {
-    color: cadetblue;
-    font-size: 5vw;
-} */
-
-.text-box  {
-    /* margin: 40px 0 40px; */
-    color: cadetblue;
-    font-family: 'League Spartan', sans-serif;
-    font-size: 3em;
-}
-
-.btn {
-    display: inline-block;
-    text-decoration: none;
-    color: chocolate;
-    border-radius: 25px;
-    border: 3px solid white;
-    padding: 12px 12px;
-    /* font-size: 1em; */
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: rgba(223, 174, 129, 0.5);
-    transition: 1s;
-}
-
-
-
-
-
-/*---- GAMES ---- */
-.games {
-    width: 50%;
-    height: 200%;
-    margin: auto;
-    padding-top: 50px;
-    font-family: 'League Spartan', sans-serif;
-}
-
-.introductions {
-    text-align: center;
-}
-
-.introductions h1 {
-    color: cornflowerblue;
-    font-size: 2em;
-    font-weight: 600;
-
-}
-
-.introductions p {
-    color: rgb(7, 7, 6);
-    font-size: 1em;
-    font-weight: 300;
-    padding: 1%;
-    line-height: 0.8;
-
-}
-
-.games h2 {
-    margin-left: 3%;
-    margin-top: 3%;
-    font-size: 2em;
-}
-
-.row {
-    margin-top: 3%;
+.project-row {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    gap: 20px; 
+    margin:3%;
+}
+
+.project-row a.projects-col {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    height: 100%;
-
+    text-decoration: none;
+    color: inherit; /* Keep text color consistent */
 }
 
-
-.row p {
-    line-height: 1.2;
+.project-row a.projects-col:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Individual Project Column Styling */
 .projects-col {
-    position: relative;
-    flex-basis: 30%;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 1s ease;
+    flex: 1 1 48%;
+    max-width: 48%; 
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .projects-col img {
-    opacity: 1;
-    border-radius: 10%;
-    transition: .5s ease;
-    backface-visibility: hidden;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-.tags{
-    margin: 3%;
-    display: flex;
-    text-decoration: none;
+.projects-col:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.tags .tag1{
-    margin: 1%;
-    border-radius: 5px;
-    background-color: aquamarine;
-    padding: 5px 10px;
-    font-size: 1em;
-}
-
-.tags .tag2{
-    margin: 1%;
-    border-radius: 5px;
-    background-color:cornflowerblue;
-    padding: 5px 10px;
-    font-size: 1em;
-}
-
-.tags .tag3{
-    color: aliceblue;
-    margin: 1%;
-    border-radius: 5px;
-    background-color:blue;
-    padding: 5px 10px;
-    font-size: 1em;
-}
-
-.projects-col .project-description {
-    transition: .5s ease;
-    font-size: 0.8em;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+/* Centered Content Section Styling */
+.centered-content {
     text-align: center;
-}
-.text{
-    text-align: left;
-}
-.text b {
-    color: brown;
+    margin: 40px auto; /* Adds space between sections */
+    padding: 20px 0; /* Adds padding within each section */
+    max-width: 800px; /* Limits the width for better readability */
 }
 
-.projects-col:hover .project-description{
-    opacity: 1;
+/* Title and Subtitle Styling */
+.centered-content h1 {
+    font-size: 2.5em;
+    color: #4570CA; /* Main accent color for titles */
+    margin-bottom: 10px;
 }
-.projects-col:hover  .image{
-    opacity: 0.3;
+
+.centered-content h3 {
+    font-size: 1.5em;
+    color: #555555; /* Soft gray for the subtitle */
+    margin-bottom: 20px;
 }
 
-.text b{
-    color: brown;
-  }
+/* Button Styling */
+.centered-content .btn {
+    display: inline-block;
+    color: #ffffff;
+    background-color: #FF7070; /* Light red color for the button */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
 
-@media(max-width: 700px) {
-    .container{
-        margin-top: 50%;
-    }
-    .text-box {
-        margin-top: 30%;
-    }
+.centered-content .btn:hover {
+    background-color: #cc5c5c; /* Darker red on hover */
+}
 
-    .text-box{
-        font-size: smaller;
-    }
-    .row {
+/* Link Styling */
+.centered-content a {
+    color: #4570CA; /* Blue color for links */
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.centered-content a:hover {
+    color: #355a8a; /* Darker shade on hover */
+}
+
+/* Paragraph Styling */
+.centered-content p {
+    color: #777777; /* Neutral gray for additional text */
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* Games Section Specific Styling */
+.games {
+    background-color: #f7f9fc; /* Light background color for contrast */
+    padding: 30px 0; /* Adds vertical padding */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
+    margin-top: 30px; /* Adds space above the section */
+}
+
+/* Project Tags */
+.tags {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.tags p {
+    font-size: 0.9em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.tag1 {
+    background-color: #00cc99;
+}
+
+.tag2 {
+    background-color: #0073e6;
+}
+
+.tag3 {
+    background-color: #0000ff;
+}
+
+/* Project Details */
+.project-details {
+    padding: 15px;
+}
+
+.project-title {
+    font-size: 2em;
+    color: #ff7070; 
+    margin-bottom: 5px;
+}
+
+.project-role {
+    font-size: 1.3em;
+    color: darkcyan;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 700px) {
+    .project-row {
         flex-direction: column;
+        align-items: center; /* Centers the content */
     }
 
-    .introductions h1{
-        font-size: 3em;
+    .projects-col {
+        flex: 1 1 80%; /* Sets each project card to take up 80% of the screen width */
+        max-width: 80%; /* Limits max width for better readability */
+        text-align: center; /* Centers text inside each project card */
+        margin-bottom: 20px;
     }
 
-    .introductions p{
-        font-size: 1em;
+    /* Center Tags and Adjust Image */
+    .tags {
+        justify-content: center;
     }
 
-    .games h2{
-        font-size: 2em;
-        margin-top: 10%;
+    .project-image img {
+        width: 100%; /* Make images take full width of the card */
+        height: auto;
     }
 
-    .text{
-       font-size: larger;
+    .project-title, .project-role, .project-description {
+        text-align: center; /* Centers text within each section */
+    }
+}
+
+@media (max-width: 500px) {
+    .projects-col {
+        flex-basis: 100%;
     }
 }
