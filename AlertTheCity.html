@@ -39,10 +39,14 @@
         <div class="media-info-container">
             <!-- Main Media Section (Video) -->
             <div class="project-media">
-                <video autoplay loop muted controls preload="none" class="media-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xzruZTOCWBA?si=iw5Fzo6sCWWddpcN?autoplay=1&mute=1"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- <video autoplay loop muted controls preload="none" class="media-video">
                     <source src="video/AlertTheCity.mp4" type="video/mp4">
                     Your browser does not support the video tag.
-                </video>
+                </video> -->
                 <!-- Action Buttons: YouTube, Play Now, GitHub -->
                 <div class="media-buttons">
                     <!-- <a href="https://www.youtube.com/watch?v=YourVideoID" target="_blank" class="youtube-button">Watch
@@ -84,7 +88,8 @@
             <!-- Item System Contribution -->
             <h3>Traffic Simulation</h3>
             <h4>Level Editor</h4>
-            <p>To make level-editing easier, I set up a 3D <strong>grid-based</strong> grid-based map by projecting the 2D grid onto the XZ plane,
+            <p>To make level-editing easier, I set up a 3D <strong>grid-based</strong> grid-based map by projecting the
+                2D grid onto the XZ plane,
                 allowing designers to quickly draw roads and buildings with brush tools like in 2D game using Tilemap
                 tools. Each cell has its own type: Road, Structure, Empty and be stored in the grid
                 for future uses on the road/structure placing.
@@ -102,28 +107,38 @@
                 <img src="images/ATC_Road.gif" alt="Traffic Simulation Example" class="contribution-image" />
             </div>
             <h4>Car AI</h4>
-            <p>Second, I have built a Car AI system that uses a network of <strong>Markers</strong> and an <strong>Adjacency Graph</strong> to navigate
-                the roads. I used an adjacency graph because it efficiently stores bidirectional markers and allows quick retrieval for pathfinding. Each road includes Marker objects that define specific positions and connect to adjacent
-                markers that act as waypoints. These markers are added to an <code>AdjacencyGraph</code> where each Marker becomes a
-                node (<code>Vertex</code>) with connections (<code>edges</code>) to its neighbors. The graph enables the AI to build flexible
-                routes, and an <strong>A*</strong> algorithm calculates the shortest route between two points by evaluating
+            <p>Second, I have built a Car AI system that uses a network of <strong>Markers</strong> and an
+                <strong>Adjacency Graph</strong> to navigate
+                the roads. I used an adjacency graph because it efficiently stores bidirectional markers and allows
+                quick retrieval for pathfinding. Each road includes Marker objects that define specific positions and
+                connect to adjacent
+                markers that act as waypoints. These markers are added to an <code>AdjacencyGraph</code> where each
+                Marker becomes a
+                node (<code>Vertex</code>) with connections (<code>edges</code>) to its neighbors. The graph enables the
+                AI to build flexible
+                routes, and an <strong>A*</strong> algorithm calculates the shortest route between two points by
+                evaluating
                 the cost of moving from one marker to the next. This allows cars to handle turns, intersections, and
                 even detours in a realistic way.
             </p>
             <!-- Contribution Image with Interactive Effect -->
-            <div class="contribution-image-container">              
+            <div class="contribution-image-container">
                 <img src="images/ATC_CarMarker.gif" alt="Traffic Simulation Example" class="contribution-image" />
                 <img src="images/ATC_Car AI.gif" alt="Traffic Simulation Example" class="contribution-image" />
-                <p class="image-caption">The red and green markers represent opposite directions, with red lines indicating valid paths between each marker and its neighboring markers</p>
+                <p class="image-caption">The red and green markers represent opposite directions, with red lines
+                    indicating valid paths between each marker and its neighboring markers</p>
             </div>
 
             <h3>Fire Simulation</h3>
             <p>For fire simulation, in order to make the wildfire spreading effect, I used collision to check with
-                structure & nature layer . When fire touches a <code>Combustible</code> object, it gradually decreasing in size using
-                <strong>Lerp</strong> (linear interpolation), which makes the burning simulation feel natural, as if the combustibles
+                structure & nature layer . When fire touches a <code>Combustible</code> object, it gradually decreasing
+                in size using
+                <strong>Lerp</strong> (linear interpolation), which makes the burning simulation feel natural, as if the
+                combustibles
                 burning out over time.
             </p>
-            <p>To make the fire movement even more realistic, I added a <code>Wind Zone</code> that affects the fire’s speed and
+            <p>To make the fire movement even more realistic, I added a <code>Wind Zone</code> that affects the fire’s
+                speed and
                 direction. The wind move direction changes periodically, giving the fire a natural flow. The wind zone
                 is designed to be easily adjusted as needed by changing its force, speed. range etc.</p>
             <div class="contribution-image-container">
@@ -132,13 +147,16 @@
             </div>
 
             <h3>Interactive Choice</h3>
-            <p>For player making choices for the community (the core game play) , I used a <code>HouseTypeInfo</code> object to
-                manage each house’s information, including the choices.( <code>HouseChoice</code> class) Each choice serves as a
+            <p>For player making choices for the community (the core game play) , I used a <code>HouseTypeInfo</code>
+                object to
+                manage each house’s information, including the choices.( <code>HouseChoice</code> class) Each choice
+                serves as a
                 modification to the base properties of the structure, allowing for a flexible and modular approach to
                 customization.
             </p>
             <p>To efficiently manage multiple options, I used a dictionary to hold all the choices player selected in a
-                list per house type. This approach allows the UI to retrieve option status with an <strong>O(1)</strong> lookup time,
+                list per house type. This approach allows the UI to retrieve option status with an <strong>O(1)</strong>
+                lookup time,
                 optimizing performance and enabling seamless UI updates. The design supports multi-option menus,
                 allowing players to freely adjust or revert selections before confirming changes, which enhances user
                 experience and control.

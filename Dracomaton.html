@@ -34,16 +34,21 @@
         <div class="project-header">
             <h1 class="project-name">Dracomaton(2023)</h1>
             <p class="project-role">Gameplay Programmer & UI Programmer</p>
-            <a href="https://store.steampowered.com/app/2457890/DRACOMATON/" target="_blank" class="play-button">Play Now</a>
+            <a href="https://store.steampowered.com/app/2457890/DRACOMATON/" target="_blank" class="play-button">Play
+                Now</a>
         </div>
         <!-- Media and Info Container for Flex Layout -->
         <div class="media-info-container">
             <!-- Main Media Section (Video) -->
             <div class="project-media">
-                <video autoplay loop muted controls preload="none" class="media-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/uWLFIssG7Ns?si=NHplrJCy-tAWQtSX?autoplay=1&mute=1"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- <video autoplay loop muted controls preload="none" class="media-video">
                     <source src="video/dracomaton.mp4" type="video/mp4">
                     Your browser does not support the video tag.
-                </video>
+                </video> -->
                 <!-- Action Buttons: YouTube, Play Now, GitHub -->
                 <div class="media-buttons">
                     <!-- <a href="https://www.youtube.com/watch?v=YourVideoID" target="_blank" class="youtube-button">Watch
@@ -126,7 +131,7 @@
                 This structure allows for easy access to specific resources through dedicated functions, making it
                 simple to spawn any item as needed. Additionally, each resource manager operates independently, so
                 programmers can create and manage single resource types without cluttering a primary script.</p>
-                <!-- <div class="contribution-image-container">
+            <!-- <div class="contribution-image-container">
                     <img src="images/rmscript.png" alt="Resource System Example" class="contribution-image" />
                     <img src="images/ResourcesManager.png" alt="Resource System Example" class="contribution-image" />
                 </div> -->
@@ -143,11 +148,11 @@
                 a <strong>Spiral Pattern</strong> outward from the player within a specific range. This will help find
                 the nearest
                 available tile by only checking necessary tiles.</p>
-                <div class="contribution-image-container">
-                    <img src="images/rewardSpawners.png" alt="Resource System Example" class="contribution-image" />
-                    <!-- <img src="images/SpiralPattern.png" alt="Resource System Example" class="contribution-image" /> -->
-                    <img src="images/dc10.gif" alt="Resource System Example" class="contribution-image" />
-                </div>
+            <div class="contribution-image-container">
+                <img src="images/rewardSpawners.png" alt="Resource System Example" class="contribution-image" />
+                <!-- <img src="images/SpiralPattern.png" alt="Resource System Example" class="contribution-image" /> -->
+                <img src="images/dc10.gif" alt="Resource System Example" class="contribution-image" />
+            </div>
             <p>I implemented a responsive and event-driven reward system using <strong>UnityEvents</strong> and
                 <strong>delegates</strong>. This
                 approach enables the reward spawner to be triggered directly by room events, reducing redundant
@@ -161,10 +166,10 @@
                 can be easily placed anywhere in the scene. I also made a dynamic system that allows each shop item
                 position to spawn either randomized or fixed items. The shop system also uses weighted randomization for
                 shop item generation, making rarer items less likely to appear.</p>
-                <div class="contribution-image-container">
-                    <img src="images/ShopItemController.png" alt="Resource System Example" class="contribution-image" />
-                    <img src="images/dc9.gif" alt="Resource System Example" class="contribution-image" />
-                </div>
+            <div class="contribution-image-container">
+                <img src="images/ShopItemController.png" alt="Resource System Example" class="contribution-image" />
+                <img src="images/dc9.gif" alt="Resource System Example" class="contribution-image" />
+            </div>
             <!-- Mod Menu Subtitle -->
             <h4>Mod Menu</h4>
             <p>In Dracomaton, the Mod Menu is a key part of the game’s UI, built to handle two slot types: Form Slots
@@ -174,10 +179,10 @@
                 IBeginDragHandler, and IDragHandler) Interface with a custom Draggable Item class. I structured the
                 slots into Form Slot and Mod Slots to simplify tracking and syncing the UI with the player's actual
                 equipment status. If an item can’t be equipped, the system displays visual cues to guide the player.</p>
-                <div class="contribution-image-container">
-                    <img src="images/dc6.gif" alt="Resource System Example" class="contribution-image" />
-                    <img src="images/dc7.gif" alt="Resource System Example" class="contribution-image" />
-                </div>
+            <div class="contribution-image-container">
+                <img src="images/dc6.gif" alt="Resource System Example" class="contribution-image" />
+                <img src="images/dc7.gif" alt="Resource System Example" class="contribution-image" />
+            </div>
         </div>
     </section>
 
@@ -292,7 +297,7 @@
     </div> -->
 
     <!-- </section> -->
-<!-- 
+    <!-- 
     <script>
         function hideBlock(id) {
             var x = document.getElementById(id);
