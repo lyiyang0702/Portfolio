@@ -14,7 +14,7 @@ body {
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     font-family: 'League Spartan', sans-serif;
-    color: #333;
+    color: #df3a3a;
 }
 
 
@@ -24,10 +24,29 @@ body {
     margin-bottom: 30px;
 }
 
-.project-name {
-    font-size: 2.5em;
-    color: #FF7070; /* Light red color to emphasize title */
-    margin: 0;
+.background-page {
+    background-color:#1075BB;
+}
+
+.background-page .project-card{
+    max-width: 1200px;
+    margin: 5% auto;
+    background-color:transparent;
+    padding: 40px;
+    box-shadow:none;
+    border-radius: 12px;
+    font-family: 'League Spartan', sans-serif;
+    color: #f10707;
+}
+
+.background-page p{
+    color: white !important;
+}
+.background-page h2 {
+    color: black !important;
+}
+.background-page h3 {
+    color: rgb(41, 40, 40) !important;
 }
 .project-role {
     font-size: 1.2em;
