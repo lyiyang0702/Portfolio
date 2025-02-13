@@ -5,7 +5,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 /* Main Project Card */
 .project-card {
     max-width: 1200px;
@@ -15,7 +14,7 @@ body {
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     font-family: 'League Spartan', sans-serif;
-    color: #333;
+    color: #df3a3a;
 }
 
 
@@ -25,13 +24,30 @@ body {
     margin-bottom: 30px;
 }
 
-.project-name {
-    font-size: 2.5em;
-    color: #FF7070;
-    /* Light red color to emphasize title */
-    margin: 0;
+.background-page {
+    background-color:#1075BB;
 }
 
+.background-page .project-card{
+    max-width: 1200px;
+    margin: 5% auto;
+    background-color:transparent;
+    padding: 40px;
+    box-shadow:none;
+    border-radius: 12px;
+    font-family: 'League Spartan', sans-serif;
+    color: #f10707;
+}
+
+.background-page p{
+    color: white !important;
+}
+.background-page h2 {
+    color: black !important;
+}
+.background-page h3 {
+    color: rgb(41, 40, 40) !important;
+}
 .project-role {
     font-size: 1.2em;
     color: #6d6d6d;
@@ -72,8 +88,7 @@ body {
     display: inline-block;
     font-size: 1em;
     color: #ffffff;
-    background-color: #FF0000;
-    /* YouTube red */
+    background-color: #FF0000; /* YouTube red */
     padding: 10px 15px;
     border-radius: 5px;
     text-align: center;
@@ -82,8 +97,7 @@ body {
 }
 
 .youtube-button:hover {
-    background-color: #CC0000;
-    /* Darker red on hover */
+    background-color: #CC0000; /* Darker red on hover */
 }
 
 /* Play Now Button */
@@ -91,8 +105,7 @@ body {
     display: inline-block;
     font-size: 1em;
     color: #ffffff;
-    background-color: #4570CA;
-    /* Blue for Play Now button */
+    background-color: #4570CA; /* Blue for Play Now button */
     padding: 10px 15px;
     border-radius: 5px;
     text-align: center;
@@ -101,8 +114,7 @@ body {
 }
 
 .play-button:hover {
-    background-color: #355a8a;
-    /* Darker blue on hover */
+    background-color: #355a8a; /* Darker blue on hover */
 }
 
 /* GitHub Button */
@@ -111,8 +123,7 @@ body {
     align-items: center;
     font-size: 1em;
     color: #ffffff;
-    background-color: #333333;
-    /* Dark color for GitHub button */
+    background-color: #333333; /* Dark color for GitHub button */
     padding: 10px 15px;
     border-radius: 5px;
     text-align: center;
@@ -121,13 +132,11 @@ body {
 }
 
 .github-button:hover {
-    background-color: #1a1a1a;
-    /* Darker gray on hover */
+    background-color: #1a1a1a; /* Darker gray on hover */
 }
 
 .github-button i {
-    margin-right: 8px;
-    /* Space between icon and text */
+    margin-right: 8px; /* Space between icon and text */
 }
 
 /* Project Info Container */
@@ -139,20 +148,17 @@ body {
 }
 
 /* About and Overview Sections */
-.project-description,
-.project-overview {
+.project-description, .project-overview {
     text-align: left;
 }
 
-.project-description h2,
-.project-overview h2 {
+.project-description h2, .project-overview h2 {
     font-size: 1.5em;
     color: #4570CA;
     margin-bottom: 10px;
 }
 
-.project-description p,
-.project-overview p {
+.project-description p, .project-overview p {
     font-size: 1em;
     color: #555;
     line-height: 1.2;
@@ -167,11 +173,10 @@ body {
 
 .project-contributions h4 {
     font-size: 1.4em;
-    color: brown;
+    color:brown;
     margin-top: 20px;
     margin-bottom: 10px;
 }
-
 .project-contributions p {
     font-size: 1.3em;
     line-height: 1.6;
@@ -191,23 +196,18 @@ body {
 /* Contribution Image */
 .contribution-image {
     width: 100%;
-    max-width: 500px;
-    /* Limit maximum width for consistency */
+    max-width: 500px; /* Limit maximum width for consistency */
     height: auto;
     border-radius: 8px;
-    transition: transform 0.3s ease;
-    /* Smooth transition for hover effect */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
     cursor: pointer;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-    /* Subtle shadow for depth */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
 }
 
 /* Zoom-Out Effect on Hover */
 .contribution-image:hover {
-    transform: scale(2);
-    /* Slight zoom-out effect */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-    /* Enhanced shadow on hover */
+    transform: scale(2); /* Slight zoom-out effect */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 /* Image Caption Styling */
@@ -217,7 +217,6 @@ body {
     margin-top: 5px;
     font-style: italic;
 }
-
 /* Code Snippets */
 code {
     background-color: #f1f1f1;
@@ -231,72 +230,18 @@ code {
 /* Section Divider Line */
 .section-divider {
     border: none;
-    border-top: 1px solid #e0e0e0;
-    /* Light grey color for subtle effect */
-    margin: 40px 0;
-    /* Space above and below the divider */
-    opacity: 0.6;
-    /* Optional: Slightly reduce opacity for a softer look */
+    border-top: 1px solid #e0e0e0; /* Light grey color for subtle effect */
+    margin: 40px 0; /* Space above and below the divider */
+    opacity: 0.6; /* Optional: Slightly reduce opacity for a softer look */
 }
-
 /* Responsive Layout */
 @media (max-width: 768px) {
-
-    /* Center media-info-container content */
     .media-info-container {
         flex-direction: column;
-        /* Stack content vertically */
-        align-items: center;
-        /* Center-align horizontally */
-        text-align: center;
     }
 
-    /* Center project header */
-    .project-header {
-        text-align: center;
-        /* Ensure text is centered */
-    }
-    .project-media iframe {
-        width: 100%; /* Make the video responsive */
-        max-width: 90%; /* Limit max width */
-        height: auto; /* Maintain aspect ratio */
-        margin: 0 auto; /* Center the video */
-    }
-    .project-header .play-button {
-        margin: 10px auto;
-        /* Center the button */
-    }
-
-    /* Center project info */
-    .project-info {
-        align-items: center;
-        /* Center-align the flex children */
-        text-align: center;
-        /* Ensure text content is centered */
-    }
-
-    .project-description,
-    .project-overview {
-        width: 100%;
-        /* Make sections full width */
-        max-width: 90%;
-        /* Limit width for better readability */
-    }
-
-    /* Center contribution image container */
-    .contribution-image-container {
-        text-align: center;
-        /* Center-align images */
-    }
-
-    .contribution-image {
-        margin: 0 auto;
-        /* Center the image itself */
-    }
-
-    /* Reduce contribution image zoom-out effect */
-    .contribution-image:hover {
-        transform: scale(1.2);
-        /* Reduce zoom level for smaller screens */
+    .youtube-button {
+        position: static;
+        margin-top: 10px;
     }
 }
