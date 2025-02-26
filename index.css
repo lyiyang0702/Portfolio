@@ -164,6 +164,7 @@
     line-height: 1.4;
 }
 
+
 /* Media Query for Responsiveness */
 @media (max-width: 700px) {
     .project-row {
