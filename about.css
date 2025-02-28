@@ -7,7 +7,8 @@
 .about p {
     font-size: 1.5rem;
     line-height: 1.6;
-    margin: 20px 0;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .about {
