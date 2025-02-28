@@ -30,7 +30,7 @@
 
         <!-- Project Header Section -->
         <div class="project-header">
-            <h1 class="project-name"> Alert The City (2024)</h1>
+            <h1 class="project-name"> Firesafe Friend (2024)</h1>
             <p class="project-role"> Solo Programmer</p>
             <a href="https://ucsc-wildfire-games.itch.io/firewise-citizens" target="_blank" class="play-button">Play
                 Now</a>
@@ -39,10 +39,14 @@
         <div class="media-info-container">
             <!-- Main Media Section (Video) -->
             <div class="project-media">
-                <video autoplay loop controls class="media-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xzruZTOCWBA?si=iw5Fzo6sCWWddpcN?autoplay=1&mute=1"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- <video autoplay loop muted controls preload="none" class="media-video">
                     <source src="video/AlertTheCity.mp4" type="video/mp4">
                     Your browser does not support the video tag.
-                </video>
+                </video> -->
                 <!-- Action Buttons: YouTube, Play Now, GitHub -->
                 <div class="media-buttons">
                     <!-- <a href="https://www.youtube.com/watch?v=YourVideoID" target="_blank" class="youtube-button">Watch
@@ -67,8 +71,8 @@
                 <!-- Project Overview Section -->
                 <div class="project-overview">
                     <h2>Project Overview</h2>
-                    <p><strong>Role:</strong> Gameplay & UI Programmer</p>
-                    <p><strong>Team size:</strong> 2 </p>
+                    <p><strong>Role:</strong> Solo Programmer</p>
+                    <p><strong>Team size:</strong> 4 </p>
                     <p><strong>Engine:</strong> Unity</p>
                     <p>I’m responsible for coding all the systems in this game and connecting them together. There are
                         three core systems in this game: Fire simulation, Traffic simulation, and Context-based Options
@@ -84,7 +88,8 @@
             <!-- Item System Contribution -->
             <h3>Traffic Simulation</h3>
             <h4>Level Editor</h4>
-            <p>To make level-editing easier, I set up a 3D <strong>grid-based</strong> grid-based map by projecting the 2D grid onto the XZ plane,
+            <p>To make level-editing easier, I set up a 3D <strong>grid-based</strong> grid-based map by projecting the
+                2D grid onto the XZ plane,
                 allowing designers to quickly draw roads and buildings with brush tools like in 2D game using Tilemap
                 tools. Each cell has its own type: Road, Structure, Empty and be stored in the grid
                 for future uses on the road/structure placing.
@@ -102,28 +107,38 @@
                 <img src="images/ATC_Road.gif" alt="Traffic Simulation Example" class="contribution-image" />
             </div>
             <h4>Car AI</h4>
-            <p>Second, I have built a Car AI system that uses a network of <strong>Markers</strong> and an <strong>Adjacency Graph</strong> to navigate
-                the roads. I used an adjacency graph because it efficiently stores bidirectional markers and allows quick retrieval for pathfinding. Each road includes Marker objects that define specific positions and connect to adjacent
-                markers that act as waypoints. These markers are added to an <code>AdjacencyGraph</code> where each Marker becomes a
-                node (<code>Vertex</code>) with connections (<code>edges</code>) to its neighbors. The graph enables the AI to build flexible
-                routes, and an <strong>A*</strong> algorithm calculates the shortest route between two points by evaluating
+            <p>Second, I have built a Car AI system that uses a network of <strong>Markers</strong> and an
+                <strong>Adjacency Graph</strong> to navigate
+                the roads. I used an adjacency graph because it efficiently stores bidirectional markers and allows
+                quick retrieval for pathfinding. Each road includes Marker objects that define specific positions and
+                connect to adjacent
+                markers that act as waypoints. These markers are added to an <code>AdjacencyGraph</code> where each
+                Marker becomes a
+                node (<code>Vertex</code>) with connections (<code>edges</code>) to its neighbors. The graph enables the
+                AI to build flexible
+                routes, and an <strong>A*</strong> algorithm calculates the shortest route between two points by
+                evaluating
                 the cost of moving from one marker to the next. This allows cars to handle turns, intersections, and
                 even detours in a realistic way.
             </p>
             <!-- Contribution Image with Interactive Effect -->
-            <div class="contribution-image-container">              
+            <div class="contribution-image-container">
                 <img src="images/ATC_CarMarker.gif" alt="Traffic Simulation Example" class="contribution-image" />
                 <img src="images/ATC_Car AI.gif" alt="Traffic Simulation Example" class="contribution-image" />
-                <p class="image-caption">The red and green markers represent opposite directions, with red lines indicating valid paths between each marker and its neighboring markers</p>
+                <p class="image-caption">The red and green markers represent opposite directions, with red lines
+                    indicating valid paths between each marker and its neighboring markers</p>
             </div>
 
             <h3>Fire Simulation</h3>
             <p>For fire simulation, in order to make the wildfire spreading effect, I used collision to check with
-                structure & nature layer . When fire touches a <code>Combustible</code> object, it gradually decreasing in size using
-                <strong>Lerp</strong> (linear interpolation), which makes the burning simulation feel natural, as if the combustibles
+                structure & nature layer . When fire touches a <code>Combustible</code> object, it gradually decreasing
+                in size using
+                <strong>Lerp</strong> (linear interpolation), which makes the burning simulation feel natural, as if the
+                combustibles
                 burning out over time.
             </p>
-            <p>To make the fire movement even more realistic, I added a <code>Wind Zone</code> that affects the fire’s speed and
+            <p>To make the fire movement even more realistic, I added a <code>Wind Zone</code> that affects the fire’s
+                speed and
                 direction. The wind move direction changes periodically, giving the fire a natural flow. The wind zone
                 is designed to be easily adjusted as needed by changing its force, speed. range etc.</p>
             <div class="contribution-image-container">
@@ -132,13 +147,16 @@
             </div>
 
             <h3>Interactive Choice</h3>
-            <p>For player making choices for the community (the core game play) , I used a <code>HouseTypeInfo</code> object to
-                manage each house’s information, including the choices.( <code>HouseChoice</code> class) Each choice serves as a
+            <p>For player making choices for the community (the core game play) , I used a <code>HouseTypeInfo</code>
+                object to
+                manage each house’s information, including the choices.( <code>HouseChoice</code> class) Each choice
+                serves as a
                 modification to the base properties of the structure, allowing for a flexible and modular approach to
                 customization.
             </p>
             <p>To efficiently manage multiple options, I used a dictionary to hold all the choices player selected in a
-                list per house type. This approach allows the UI to retrieve option status with an <strong>O(1)</strong> lookup time,
+                list per house type. This approach allows the UI to retrieve option status with an <strong>O(1)</strong>
+                lookup time,
                 optimizing performance and enabling seamless UI updates. The design supports multi-option menus,
                 allowing players to freely adjust or revert selections before confirming changes, which enhances user
                 experience and control.
@@ -149,60 +167,7 @@
             </div>
         </div>
     </section>
-    <!-- <li> UI <i class="fa fa-caret-down" onclick="hideBlock('multi')" style="cursor:pointer"></i> </li>
-                    <div id="multi" style="display: none;">
-                        In a PVP arena game, local multiplayer is very important as part of the core gameplay.
-                        Therefore, I have used Unity's <b>new input system</b> to facilitate gameplay for up to four
-                        players,
-                        each using distinct controllers. First, I created an Input Action Asset which organized all
-                        relevant in-game actions into a group of action maps, distinguishing between UI and Player
-                        controls.
-                        <br>
-                        <img src="images/UIActions_WR.png">
-                        <img src="images/PlayerActions_WR.png"><br>
-                        Next, I used the PlayerInput component within Unity’s new Input System to manage input across
-                        multiple players, customizing actions based on each player's input devices and unique action
-                        maps, for example, the controller player needs to press South Button to jump, but the keyboard
-                        needs to press Space. <br>
-                        <img src="images/playerInput.png"><br>
 
-                        However, the normal event system doesn’t support handling multiple UI
-                        input. To address this, I used an additional component called the "Input System UI Input
-                        Module," enabling the integration of the Input System with the UI system. This ensures players
-                        can seamlessly interact with UI elements, such as buttons and sliders on menu scenes or other UI
-                        scenes. For example, controller players can also navigate through buttons.
-                        <br>
-                        <img src="images/eventSystem.png"><br>
-                    </div> -->
-    <!-- </div>
-            </div>
-
-        </div> -->
-
-
-
-
-    <!-- <div>
-        <h2>Design Details</h2>
-        <p><a
-                href="https://docs.google.com/presentation/d/1MdtTKm_kEejC5-dENBHoSK-WHHb_aEeLbEA8JtSirbc/edit?usp=sharing">Design
-                Slides</a></p>
-    </div> -->
-
-    <!-- </section>
-
-    <script>
-        function hideBlock(id) {
-            var x = document.getElementById(id);
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-    </script>
-
-    <div id="footer"></div> -->
     <footer id="footer"></footer>
 </body>
 
