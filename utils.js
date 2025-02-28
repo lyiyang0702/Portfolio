@@ -40,3 +40,20 @@ document.addEventListener("DOMContentLoaded", () => {
     window.showMenu = showMenu;
     window.hideMenu = hideMenu;
 });
+
+window.onscroll = function() {
+    let button = document.getElementById("backToTop");
+    if (document.documentElement.scrollTop > 100) {
+      button.style.display = "block";
+    } else {
+      button.style.display = "none";
+    }
+  };
+  
+  // Scroll to the top when clicked
+  document.getElementById("backToTop").onclick = function() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };

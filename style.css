@@ -74,7 +74,6 @@ a {
     opacity: 0.7;
     margin-top: 10px;
 }
-
 /* Navigation */
 nav {
     display: flex;
@@ -120,7 +119,8 @@ nav {
 /* Buttons */
 .btn {
     display: inline-block;
-    color: chocolate;
+    color: #ffffff;
+    background-color: #FF7070;
     border: 2px solid white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -129,9 +129,17 @@ nav {
 }
 
 .btn:hover {
-    background-color: rgba(223, 174, 129, 0.5);
+    background-color: #cc5c5c; 
 }
-
+#backToTop {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    z-index: 1000;
+}
+  
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     /* Show menu and close icons on mobile */
