@@ -184,7 +184,10 @@ body {
     margin: 10px 0;
     text-align: justify;
 }
-
+.project-contributions ul{
+    color:#777;
+    font-size:1.2em;
+}
 
 /* Contribution Image Container */
 .contribution-image-container {

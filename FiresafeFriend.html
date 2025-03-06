@@ -30,23 +30,20 @@
 
         <!-- Project Header Section -->
         <div class="project-header">
-            <h1 class="project-name"> Firesafe Friend (2024)</h1>
+            <h1 class="project-name"> Firesafe Friend</h1>
             <p class="project-role"> Solo Programmer</p>
-            <a href="https://ucsc-wildfire-games.itch.io/firewise-citizens" target="_blank" class="play-button">Play
-                On Itch</a>
+            <a href="https://ucsc-wildfire-games.itch.io/firesafe-friends-prototype" target="_blank"
+                class="play-button">Play
+                on Itch.io</a>
         </div>
         <!-- Media and Info Container for Flex Layout -->
         <div class="media-info-container">
             <!-- Main Media Section (Video) -->
             <div class="project-media">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VeHHFzyTDXg?si=bsf1sqMqPXZNsAIO"
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/taFrtuP4-QU?si=0ZqBzop1ZA0o2QBV"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <!-- <video autoplay loop muted controls preload="none" class="media-video">
-                    <source src="video/AlertTheCity.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video> -->
                 <!-- Action Buttons: YouTube, Play Now, GitHub -->
                 <div class="media-buttons">
                     <!-- <a href="https://www.youtube.com/watch?v=YourVideoID" target="_blank" class="youtube-button">Watch
@@ -61,10 +58,8 @@
                 <!-- About Section -->
                 <div class="project-description">
                     <h2>About</h2>
-                    <p>Alert the City is a 3D top-down traffic simulation and educational game that teaches players
-                        about wildfire evacuation. Players act as community leaders making critical decisions
-                        during a wildfire evacuation to avoid loss and ensure safety. Each choice directly impacts the
-                        evacuation’s final outcome, offering valuable lessons on emergency preparedness and response.
+                    <p>Firesafe Friend is a two-player strategy game where players can take turns upgrading their houses
+                        to protect their properties from wildfire.
                     </p>
                 </div>
 
@@ -72,10 +67,10 @@
                 <div class="project-overview">
                     <h2>Project Overview</h2>
                     <p><strong>Role:</strong> Solo Programmer</p>
-                    <p><strong>Team size:</strong> 4 </p>
+                    <p><strong>Team size:</strong> 6 </p>
                     <p><strong>Engine:</strong> Unity</p>
                     <p>I’m responsible for coding all the systems in this game and connecting them together. There are
-                        three core systems in this game: Fire simulation, Traffic simulation, and Context-based Options
+                        three core systems in this game: Fire simulation, Dynamic Upgrade System, and Two-Player Mode
                     </p>
                 </div>
             </div>
@@ -85,86 +80,75 @@
         <div class="project-contributions">
             <h2>Contributions</h2>
 
-            <!-- Item System Contribution -->
-            <h3>Traffic Simulation</h3>
-            <h4>Level Editor</h4>
-            <p>To make level-editing easier, I set up a 3D <strong>grid-based</strong> grid-based map by projecting the
-                2D grid onto the XZ plane,
-                allowing designers to quickly draw roads and buildings with brush tools like in 2D game using Tilemap
-                tools. Each cell has its own type: Road, Structure, Empty and be stored in the grid
-                for future uses on the road/structure placing.
-            </p>
+            <h3>Dynamic Upgrade System</h3>
+            <p>House upgrades are the core mechanics of this game, so I developed a <strong>modular and efficient
+                    upgrade system</strong> that manages material properties and visual updates dynamically. Each
+                upgrade affects the fire simulation outcome, making material selection a strategic decision.</p>
             <div class="contribution-image-container">
-                <img src="images/ATC_LevelEditor.gif" alt="Traffic Simulation Example" class="contribution-image" />
-                <img src="images/Gird.png" alt="Traffic Simulation Example" class="contribution-image" />
+                <img src="images/FFHouseUpgrade.gif" alt="House Upgrade Example" class="contribution-image" />
             </div>
-            <h4>Road System</h4>
-            <p>For a more accurate traffic simulation, First I have set up a road system that can dynamically adjust
-                each road assets by checking its neighbour cells direction(left, top, right, down) and rotate/modify the
-                assets to align with the neighbour.
+            <p>To achieve this, I used <strong>Scriptable Objects</strong> to store and manage material properties
+                (e.g., Class A, Class B fire resistance). When swapping materials, the system references the associated
+                Scriptable Object rather than instantiating or destroying GameObjects at runtime, ensuring
+                <strong>better performance and scalability</strong>. This approach also allows for <strong>easier
+                    balancing and modification</strong> of material attributes without modifying core game logic.
             </p>
-            <div class="contribution-image-container">
-                <img src="images/ATC_Road.gif" alt="Traffic Simulation Example" class="contribution-image" />
-            </div>
-            <h4>Car AI</h4>
-            <p>Second, I have built a Car AI system that uses a network of <strong>Markers</strong> and an
-                <strong>Adjacency Graph</strong> to navigate
-                the roads. I used an adjacency graph because it efficiently stores bidirectional markers and allows
-                quick retrieval for pathfinding. Each road includes Marker objects that define specific positions and
-                connect to adjacent
-                markers that act as waypoints. These markers are added to an <code>AdjacencyGraph</code> where each
-                Marker becomes a
-                node (<code>Vertex</code>) with connections (<code>edges</code>) to its neighbors. The graph enables the
-                AI to build flexible
-                routes, and an <strong>A*</strong> algorithm calculates the shortest route between two points by
-                evaluating
-                the cost of moving from one marker to the next. This allows cars to handle turns, intersections, and
-                even detours in a realistic way.
-            </p>
-            <!-- Contribution Image with Interactive Effect -->
-            <div class="contribution-image-container">
-                <img src="images/ATC_CarMarker.gif" alt="Traffic Simulation Example" class="contribution-image" />
-                <img src="images/ATC_Car AI.gif" alt="Traffic Simulation Example" class="contribution-image" />
-                <p class="image-caption">The red and green markers represent opposite directions, with red lines
-                    indicating valid paths between each marker and its neighboring markers</p>
-            </div>
 
-            <h3>Fire Simulation</h3>
-            <p>For fire simulation, in order to make the wildfire spreading effect, I used collision to check with
-                structure & nature layer . When fire touches a <code>Combustible</code> object, it gradually decreasing
-                in size using
-                <strong>Lerp</strong> (linear interpolation), which makes the burning simulation feel natural, as if the
-                combustibles
-                burning out over time.
+            <h3>Fire Simulation System</h3>
+            <p>To create a <strong>realistic and dynamic fire simulation</strong>, I designed a <strong>graph-based
+                    house structure</strong> where each house part is treated as a node. This allows the fire to spread
+                naturally by checking neighboring nodes, making it easier to track <strong>combustible
+                    connections</strong> and apply fire propagation rules efficiently.</p>
+            <p>To enhance realism, I implemented a <strong>burning stage system</strong> where each combustible object
+                progresses through different states:</p>
+            <ul>
+                <li><strong>Ignition:</strong> The object starts catching fire.</li>
+                <li><strong>Burning:</strong> The fire intensity increases, affecting nearby objects.</li>
+                <li><strong>Charring or Destruction:</strong> The object weakens and eventually turns into ashes or
+                    collapses.</li>
+            </ul>
+            <p>Each stage influences <strong>heat transfer and fire spread</strong> based on material properties. For
+                instance, some materials may smolder for longer, while others burn out quickly, adding depth to the
+                strategy.</p>
+            <p>For better code structure and reusability, I implemented an <strong>inheritance-based combustibility
+                    system</strong>:</p>
+            <ul>
+                <li>A <strong>base combustibility class</strong> handles fundamental fire spread behavior and burning
+                    stages.</li>
+                <li>Specialized subclasses (e.g., house parts, plants, props) extend the base class, allowing
+                    <strong>flexible expansion</strong> for different fire interactions without duplicating logic.
+                </li>
+            </ul>
+            <p>This modular design ensures that new combustible types can be easily added while maintaining
+                <strong>optimized performance and structured gameplay logic</strong>.
             </p>
-            <p>To make the fire movement even more realistic, I added a <code>Wind Zone</code> that affects the fire’s
-                speed and
-                direction. The wind move direction changes periodically, giving the fire a natural flow. The wind zone
-                is designed to be easily adjusted as needed by changing its force, speed. range etc.</p>
-            <div class="contribution-image-container">
-                <img src="images/ATC_Fire.gif" alt="Fire Simulation Example" class="contribution-image" />
-                <img src="images/ATC_Wind.gif" alt="Fire Simulation Example" class="contribution-image" />
-            </div>
 
-            <h3>Interactive Choice</h3>
-            <p>For player making choices for the community (the core game play) , I used a <code>HouseTypeInfo</code>
-                object to
-                manage each house’s information, including the choices.( <code>HouseChoice</code> class) Each choice
-                serves as a
-                modification to the base properties of the structure, allowing for a flexible and modular approach to
-                customization.
+            <h3>Two-Player Mode (Turn-Based System)</h3>
+            <p>Since <strong>Firesafe Friend</strong> is a <strong>local multiplayer game</strong>, I developed a
+                <strong>turn-based player management system</strong> that switches between two houses seamlessly. This
+                includes:
             </p>
-            <p>To efficiently manage multiple options, I used a dictionary to hold all the choices player selected in a
-                list per house type. This approach allows the UI to retrieve option status with an <strong>O(1)</strong>
-                lookup time,
-                optimizing performance and enabling seamless UI updates. The design supports multi-option menus,
-                allowing players to freely adjust or revert selections before confirming changes, which enhances user
-                experience and control.
-            </p>
+            <ul>
+                <li><strong>A dynamic inventory and budget system</strong> that tracks individual players’ upgrades and
+                    resources separately.</li>
+                <li>Ensuring <strong>game state persistence</strong> so that players can resume their turns without
+                    losing progress.</li>
+            </ul>
             <div class="contribution-image-container">
-                <img src="images/HouseInfo.png" alt="Interactive Choice Example" class="contribution-image" />
-                <img src="images/ATC_HouseMenu.gif" alt="Interactive Choice Example" class="contribution-image" />
+                <img src="images/FFTwoPlayer.gif" alt="Two Player Mode Example" class="contribution-image" />
             </div>
+            <h3>Tutorial System</h3>
+            <p>To improve accessibility and onboard new players effectively, I implemented a <strong>step-by-step
+                    tutorial system</strong> that guides players through core mechanics. The tutorial system consists
+                of:</p>
+            <ul>
+                <li>A <strong>Tutorial Manager</strong> that oversees progression, ensuring that players complete key
+                    steps before moving forward.</li>
+                <li><strong>Scripted tutorial events</strong> that prevent players from skipping critical instructions,
+                    ensuring they understand the game mechanics before starting.</li>
+                <li>UI animations and smooth transitions using <strong>DoTween</strong>, creating an <strong>intuitive
+                        and polished user experience</strong>.</li>
+            </ul>
         </div>
     </section>
     <p id="backToTop" class="btn">Top</p>
