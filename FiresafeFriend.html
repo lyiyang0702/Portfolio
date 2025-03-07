@@ -93,7 +93,9 @@
                 <strong>better performance and scalability</strong>. This approach also allows for <strong>easier
                     balancing and modification</strong> of material attributes without modifying core game logic.
             </p>
-
+            <div class="contribution-image-container">
+                <img src="images/FFMaterialInfo.png" alt="Material Scriptable Object Example" class="contribution-image" />
+            </div>
             <h3>Fire Simulation System</h3>
             <p>To create a <strong>realistic and dynamic fire simulation</strong>, I designed a <strong>graph-based
                     house structure</strong> where each house part is treated as a node. This allows the fire to spread
@@ -104,12 +106,16 @@
             <ul>
                 <li><strong>Ignition:</strong> The object starts catching fire.</li>
                 <li><strong>Burning:</strong> The fire intensity increases, affecting nearby objects.</li>
-                <li><strong>Charring or Destruction:</strong> The object weakens and eventually turns into ashes or
+                <li><strong>Destruction:</strong> The object weakens and eventually turns into ashes or
                     collapses.</li>
             </ul>
             <p>Each stage influences <strong>heat transfer and fire spread</strong> based on material properties. For
                 instance, some materials may smolder for longer, while others burn out quickly, adding depth to the
                 strategy.</p>
+                <div class="contribution-image-container">
+                    <img src="images/FFBurnStage.gif" alt="Burn Stage Example" class="contribution-image" />
+                    <img src="images/FFDifferentMaterial.gif" alt="Material Example" class="contribution-image" />
+                </div>
             <p>For better code structure and reusability, I implemented an <strong>inheritance-based combustibility
                     system</strong>:</p>
             <ul>
@@ -149,6 +155,9 @@
                 <li>UI animations and smooth transitions using <strong>DoTween</strong>, creating an <strong>intuitive
                         and polished user experience</strong>.</li>
             </ul>
+            <div class="contribution-image-container">
+                <img src="images/FFTutorial.gif" alt="Tutorial Example" class="contribution-image" />
+            </div>
         </div>
     </section>
     <p id="backToTop" class="btn">Top</p>
