@@ -143,7 +143,7 @@ nav {
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     /* Show menu and close icons on mobile */
-    /* .header .menu-icon {
+    .header .menu-icon {
         display: block;
         font-size: 1.5em;
         color: brown;
@@ -160,18 +160,40 @@ nav {
         top: 10px;
     }
 
-    /* Sidebar Navigation for Mobile */
-    /* .nav-links {
-        display: none; 
+    .nav-links {
         position: fixed;
         top: 0;
-        right: -200px; 
-        width: 200px;
-        height: 100vh;
-        background: #d69b94;
+        right: -100%; /* Start off-screen */
+        width: 200px; /* Keep it narrower on mobile */
+        height: 100vh; /* Full screen height */
+        background: #d69b94; /* Background color */
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        transition: right 0.3s ease;
-    }  */
+        text-align: center;
+        transition: right 0.3s ease-in-out;
+        z-index: 1100; /* Ensure it appears above the YouTube video */
+        display: flex;
+    }
+    
+    /* Show menu when active */
+    .nav-links.active {
+        right: 0;
+    }
+    
+    /* Ensure links stack vertically */
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Add spacing between links */
+        padding: 0;
+        list-style: none;
+    }
+    
+    /* Adjust link styling */
+    .nav-links ul li a {
+        color: white;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
 }

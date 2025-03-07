@@ -237,12 +237,21 @@ code {
     margin: 40px 0; /* Space above and below the divider */
     opacity: 0.6; /* Optional: Slightly reduce opacity for a softer look */
 }
+
+.project-media iframe{
+    width: 560px;
+    height: 315px;
+}
 /* Responsive Layout */
 @media (max-width: 768px) {
     .media-info-container {
         flex-direction: column;
     }
 
+    .project-media iframe{
+        width: auto;
+        height: auto;
+    }
     .youtube-button {
         position: static;
         margin-top: 10px;
